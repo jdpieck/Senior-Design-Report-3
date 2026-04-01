@@ -1,0 +1,20 @@
+selected: 
+  - title: Roller Glue Applicator
+    path: "roller-design.png" 
+    description: "In this scenario, the MPHX plate is passed over a roller, which uniformly applies adhesive over the plate's ridges. The roller sits in a trough of adhesive, which allows it to be re-coated as it spins. The use of a roller benefits from the use of lower viscosity adhesives."
+
+  - title: Channel Slot MPHX Jig
+    path: "channel-slot-design.png" 
+    description: The MPHX plates have rails on the sides, which can be used to secure them. This design uses a tray with open-face slots that allow the plates to slide in and out. The open face allows adhesive to be applied while the plates remain fixed.
+    
+  # - title: Rotating Frame
+  #   path: "RotatingFrameLaminaApplication.PNG" 
+  #   description: A sheet of lamina begins in a square frame slightly less than perpendicular to the MPHX plate and holding plate. When the plate is in the correct position, the frame rotates on a hinge and sets the lamina on top. There is a lip on the bottom of the frame that is narrow enough to prevent the lamina from falling through, but wide enough to allow it to pass over the holding plate without touching. The hinge of the frame is positioned below the plane of the feed mechanism, to fully place the lamina on top of the MPHX plate and release it from the frame.
+  
+  # - title: Top Clamping Panel
+  #   path: "TopClampingPannel_Leah.png"
+  #   description: Uniform compression of the assembly is ensured by a flat pressure plate clamped at discrete points with any type of clamping mechanism. 
+
+  - title: Roller Bearing Feed
+    path: "roller-feed-design.png" 
+    description: This feed mechanism uses powered rollers to move a tray of MPHX plates along a track. The rollers could span the length of the tray or be cantilevered as pictured. 
