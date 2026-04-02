@@ -227,5 +227,5 @@ goodman_safetyfactor = (vonmises_a/S_e + vonmises_m/S_ut)^(-1);
   caption: [Simulation of Deformation using Onshape simulation tools. ]
 )
 
-///////////////////////////////////
-#include "bin/drawing.typ"
+/////////////////////////////////// 
+#include "bin/drawings.typ"
