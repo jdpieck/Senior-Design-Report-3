@@ -1,128 +1,3 @@
-#import "bin/template.typ": *
-// 4.1) Discussion of requirements and rolldown to subsystems __/5.0
-// Half points well described requirement updates, half points roll down discussion
-// 4.2) Discussion of various subsystems and their interface __/10.0
-// Half marks accurate and appropriate technical discussions, describes how subsystems work together
-// Half marks for proper engineering drawing package
-// 4.3) Proof that design will meet requirements (eg. calculations) __/10.0
-// Accurate, well motivated/ related to requirements, reasonable assumptions stated
-== Design Requirement Updates 
-
-As outlined in @requirements, since Report 1 our team has worked closely with the sponsor to refine design requirements, making them more specific and measurable. The initial requirements were broad and largely qualitative, providing limited guidance beyond the expectation that the system should function as intended. The requirements set forth in @quantrequirements  are designed to be quantitative and measurable. A major change in our requirements came out of our selection of Oatey Milky Clear ABS Cement as our adhesive. Since ABS and PC are chemically incompatible, we could not find any nontoxic adhesives that could bind them strongly enough. The SDS @OateySDS states that good ventilation is required, which for our purposes means that the machine must be able to operate in a fume hood; this changed Requirement 4 from merely "benchtop size" to needing to fit within a fume hood. Our sponsor has worked to get us access to a 6' fume hood of standard dimensions, which at their smallest are 5'3" wide, 2' deep and 4' tall, with a sash opening to 2'4" @GenieFumeHood @LabconcoFumeHood.
-
-// The *quantitative* requirements of our system are as follows: 
-
-// + The system must be capable of producing 1000 modules in an 8-hour working day 
-// + The system must be capable of producing at least 10 heat exchangers in its lifetime.  
-// + The system most produce MPHX modules that are capable of withstanding 10 psi of internal pressure
-// + The system must apply sufficient pressure to the MPHX plate during the glue application process 
-// + Adequate force must be maintained on the jigs throughout the adhesive curing time.
-
-
-// In addition to these qualitative requirements, we have continued to refine and specify quantitative requirements since Report 1. Through adhesive testing conducted in recent weeks, our team has identified new challenges that the system must address, including the short pot life of the adhesive. These findings, in collaboration with our sponsor, have led to the development of the following additional requirements:
-
-// - The system must be easily cleanable. 
-// - Sufficient pressure must be applied to pull the jig through the rollers and ensure uniform coating of the plate ridges.
-// - The system must fit within a standard sized fume hood
-== Design Requirements <quantrequirements>
-The design requirements for the full system are.
-+ Adhesive strength: The system must produce MPHX modules which can withstand 10 psi of internal pressure.
-+ High throughput: The system must be able to produce at least 1 heat exchanger (1000 modules) in an 8-hour working day. 
-+ Long life cycle: The system must be able to produce at least 10 heat exchangers in its lifetime.
-+ Form factor: The system must fit within a 6' standard fume hood (5' length $times$ 2' width $times$ 2.5' height)
-+ MPHX-lamina alignment: Must align within 1.5 mm laterally and 3 mm longitudinally.
-
-In the following sections, a matching number indicates that a requirement was rolled down from the requirements above.
-
-=== Adhesive Selection
-1. Adhesive must be capable of sustaining 10 psi of internal pressure.
-2. Adhesive must have a cure time of less than 24 hours, preferably within 1 hour.
-
-=== Jig
-1. Jig must withstand and transmit a compressive force of 6 lb.
-2. Must be able to create at least 100 jigs.
-3. Jigs must be reusable at least 50 times.
-4. Jigs must have maximum dimensions of 18 in $times$ 18 in and stack to at most 28 in.
-5. MPHX-Lamina Alignment: Must align within 1.5 mm laterally and 3 mm longitudinally.
-
-
-
-=== Roller
-1. Must be able to provide at least 3 lb of force (adjustable to $plus.minus 1 "lb"$) per MPHX plate with an angular deformation within $8 times 10^(-4) "rad"$.
-2. Must be able to process 1000 modules in 8 hours
-3. Must be able to last at least 5,000 cycles
-4. Maximum dimensions of 6 in length $times$ 18 in width $times$ 28 in height 
-
-=== Feed Mechanism
-1. Must be able to process 1000 modules in 8 hours
-2. Must be robust to complete at least 10,000 modules worth of cycles
-3. Maximum width of 18", maximum length of 18" on each side of adhesive applicator and a maximum height 24"
-
-
-
-== Roll Down on Requirements 
-
-=== Adhesive Selection
-
-The adhesive's most obvious function is to hold the MPHX plate and lamina together, so it inherited Requirement 1 nearly verbatim. The adhesive also had to be chemically compatible with the materials already in use for the system, i.e. ABS for the MPHX plate and PC for the lamina. Requirement 2, the throughput, also influenced our selection as we need a reasonably fast curing time in order to maximize manufacturing efficiency.
-
-=== Roller
-
-In order to meet Requirement 1 of adhesive strength, we needed the roller to provide adequate force to the MPHX plate in order to ensure glue adhesion to the plate. In @SpringLoad we calculated that the required force given our MPHX and adhesive selection is 3 lb. We recognize that the force needed represents a ballpark estimate, and therefore also required some adjustability in the jig and in the load applied in case of issues encountered in testing. 
-
-// To meet the pressure on MPHX requirement, we have selected springs that are capable of excertning the nessary force (link to calculations). 
-
-// The top roller assembly includes shims that we can add to increase or decrease the force the jig experiences
-
-// furthermore, the top roller vertical spacing from the roller can also be adjusted thanks again to the 80x20, giving us another angle of adjustment
-
-// The roller can also be removed thanks to 
-
-=== Jig 
-
-The jig subsystem has to fulfill several purposes in the design. First, the MPHX jig must hold the MPHX plate in place during the adhesive application. To that end, it must be able to position the MPHX in alignment with the roller, informing the required the lateral tolerance of the jig (Requirement 5). Since the lamina are somewhat oversized, the longitudinal tolerance can be slightly less. The jig must also sustain compressive force twice per cycle, first in the adhesive application as it passes through the roller, then in the clamping phase. The clamping phase requires 5 lb of compressive force (see @clampingforce) and the roller requires 6 lb of compressive force (see @SpringLoad), so taking the larger of the two gave a requirement of 6 lb loading. The fixture time of the selected adhesive is 30 minutes, so the throughput of 1000 modules per day (assuming 5 hours of working time and 3 hours other) gives a requirement of using 100 jigs in one working hour, as detailed in @jigstacking. The lifetime requirements also require that 10,000 MPHX modules be made, which at 100 jigs translates to a requirement that each jig must be reusable a minimum of 50 times.
-
-
-
-
-== Subsystem Interactions 
-
-=== Roller 
-
-==== Roller Super-Structure 
-The roller super-structure provides the primary support for the adhesive roller subsystem, which is mounted via a base plate secured to the adhesive pan. It also supports the pressure rollers, which apply force to ensure an even coating of adhesive on the MHX plates. The structure is designed to allow unobstructed access to the adhesive pan for maintenance and cleaning.
-
-===== Pressure Rollers
-A crossbar spans the adhesive roller subsystem and supports the pressure rollers, which are mounted to 80/20 extruded rail (of the roller super-structure). This crossbar can be unlatched and raised, enabling removal of the adhesive roller assembly once it is unbolted from the base plate for cleaning.
-
-==== Adhesive Roller 
-The adhesive roller subsystem is housed between the two sections of the feed assembly. It is mounted to the roller super-structure via a base plate, to which the entire assembly is secured. As previously described, pressure rollers are positioned directly above the adhesive rollers.
-
-The adhesive rollers interact with the jig through a knurled surface. The knurling provides feeding friction and insures uniform take up and distribution of adhesive. 
-
-
-
-==== Motor Subassembly
-
-The motor provides driving power to the adhesive rollers through a flexible coupling. It is part of the roller super-structure and is mounted to the same base plate as the adhesive roller subassembly.
-
-==== Electrical Assembly
-The electrical components are directly tied to the operation and control of the roller assembly. The embedded socket will be soldered into the terminals of the DC power supply, allowing the device to be powered by plugging it into a standard wall socket. This connection can be done with any female-male extension cord, as the socket is embedded into the top of the electrical box. The switch on the speed controller will turn the roller mechanism on, and turning the dial will allow the operator to determine the speed at which the roller rotates and applies adhesive to the MPHX plates. 
-=== Jigs
-
-The MPHX jig is fed through the feed subsystem and over the adhesive roller subsystem. The feed subsystem is divided into two sections, positioned on either side of the roller subsystem, to allow unobstructed contact between the jig and the rollers. The feed subsystem also incorporates a pressure roller assembly, which applies force to the jig as it passes over the adhesive rollers.
-
-After being put through the feed subsystem, the jig is removed and placed onto the lamina jig. The lamina jig holds pre-cut sheets of lamina and features extrusions that enable uniform pressure to be applied to the plate ridges during the adhesive curing process.
-
-
-=== Feed 
-
-The feed subsystem's purpose is to move the jig over the adhesive roller. The entire system is constructed using 80/20 extruded rail. This is done such that the system is full adjustable. The height of the feed track which the jig rolls on can be adjusted in height. In addition the distance between the feed track can be adjusted to ensure that there is no fuction between the rails and jig allowing for the jig to smoothly slide along the feed system. 
-
-This subsystem is connected to the roller super-structure via the base plaate of the roller super-structure assembly which has hole for T-slot nuts to slide into the 40-8020 rail of the feed subsystem
-
-
-
 == Design Verification 
 
 === Adhesive Selection Verification
@@ -237,7 +112,7 @@ To achieve 3 lb of compression on each MPHX plate, two springs and three bearing
 Required compression for the selected spring: 
 
 - Initial spring compression: set so 3 lbf of force is applied to each plate (1.5 lbf of force per spring)
-- Selected spring rate: 4.1 lbf/in, whcih determines the required compression to achieve desired force
+- Selected spring rate: 4.1 lbf/in, which determines the required compression to achieve desired force
 
 Compression of each spring:
 
@@ -259,7 +134,7 @@ It is not expected that a thin layer of adhesive will significantly change this 
 
 As mentioned in @SpringLoad, the load required for each MPHX plate is 3 lbf, and 6 lbf per jig since there are two plates per jig. Therefore, the worst-case force required to cause slippage at the roller is:
 
-$0.6055 dot 6 "lbf" = 3.633 lbf $
+$0.6055 dot 6 "lbf" = 3.633 "lbf" $
 
 The jig rides on lubricated ball bearings, so it is not expected that the frictional resistance of the bearings will exceed this force. As a result, the jig should pass through the roller without slipping, especially since the bearings are operating under relatively low loads and low rotational speeds.
 
@@ -403,7 +278,7 @@ The diagrams in @shaft-force-diag show the maximum bending moment occurs in the 
 We also preformed finite element analysis on the part as seen in @sim.
 
 === Axle Life Cycle Analysis
-The axle has to last for at least 5000 cycles according to Requirement 3. Given that AISI 1018 steel has an ultimite tensile strength of $S_"ut" = 64 "ksi"$ @ShigleysMechanicalEngineering, the ultimate strength is given by
+The axle has to last for at least 5000 cycles according to Requirement 3. Given that AISI 1018 steel has an ultimate tensile strength of $S_"ut" = 64 "ksi"$ @ShigleysMechanicalEngineering, the ultimate strength is given by
 $
   S_e = k_a k_b S_e' = k_a k_b (S_("ut"))/2,
 $
@@ -425,11 +300,11 @@ The MATLAB simulation in @matlabshaft gives a factor of safety of 735, showing t
 === Glue and Lamina Adhesion Force <clampingforce>
 To make sure the jig properly holds the lamina and glued MPHX plates during the drying process, the force needed to be applied must be calculated. The glue (Oatey Special Medium) used does not specify a required pressure to ensure bonding. Directions on the container only say to "hold the pipe and fitting together for 30 seconds" or longer, depending on the temperature.
 
-Without a definite number, an estimate was assumed to be the average of two on the market clamps. These clamps were: _Irwin Quick-Grip 4.25in X 1-3/16 in. D Micro Bar Clamp and Spreader 35lb_ (#link("https://www.acehardware.com/departments/tools/hand-tools/bar-clamps/2386852?store=17424&gclsrc=aw.ds&gad_source=1&gad_campaignid=20155428902&gbraid=0AAAAADtqLJEtgbXsj4KqhD5_X0nM7dxIP&gclid=CjwKCAjwyMnNBhBNEiwA-Kcguy5qeXpSlHg73kD6v3P2OnuiosjhtsfUyaG2f80p3JZL5yRO1hRVdBoCPSIQAvD_BwE")[Reference A]) and _Irwin Quick Grip 12 in. X 3-1/2 in. D Bar Clamp 300lb_ (#link("https://www.irwintools.com/product/1964718/quick-grip-medium-duty-one-handed-bar-clamps?tid=578191")[Reference B]). The Irwin branded clamps were chosen specifically since they were used during the initial glue testing phase.
+Without a definite number, an estimate was assumed to be the average of two on the market clamps. These clamps were: _Irwin Quick-Grip 4.25in X 1-3/16 in. D Micro Bar Clamp and Spreader 35lb_ @IrwinQuickGrip425 and _Irwin Quick Grip 12 in. X 3-1/2 in. D Bar Clamp 300lb_ @QUICKGRIPMediumDutyOneHanded. The Irwin branded clamps were chosen specifically since they were used during the initial glue testing phase.
 
-The clamping force of Reference A is 35 lbs with a clamping capacity of 4.25" and a depth of 1-3/16". Our tested sample area was a 1" diameter pipe with a 0.5" inner diameter. The pipe had surface area that we applied glue to of $A = pi dot (0.5)^2- pi dot (0.25)^2 "in"^2$. This gives an approximate applied pressure of $59.41784543 "psi." (P_A= (35lbf)/(0.5890486225"in"^2))$
+The clamping force of Reference A is 35 lbs with a clamping capacity of 4.25" and a depth of 1-3/16". Our tested sample area was a 1" diameter pipe with a 0.5" inner diameter. The pipe had surface area that we applied glue to of $A = pi dot (0.5)^2- pi dot (0.25)^2 "in"^2$. This gives an approximate applied pressure of $59.41784543 "psi." (P_A= (35 "lbf")/(0.5890486225"in"^2))$
 
-Similarly, Reference B had a clamping force of 300lbs and a capacity of 12" with a depth of 3-1/2". The same test area of $0.5890486225"in"^2$ was used for the pressure approximation for Reference B. The pressure came out to be about $P_B = 509.2958179 "psi" (P_B= (300lb)/(0.5890486225"in"^2))$.
+Similarly, Reference B had a clamping force of 300lbs and a capacity of 12" with a depth of 3-1/2". The same test area of $0.5890486225"in"^2$ was used for the pressure approximation for Reference B. The pressure came out to be about $P_B = 509.2958179 "psi" (P_B= (300"lb")/(0.5890486225"in"^2))$.
 
 Since these were approximately the pressures the glues were held at during testing, the average of the two values can be taken as a conservative estimate for the glue's required bonding pressure.
 
@@ -449,13 +324,13 @@ Each of the MPHX plates has ridges with a surface area of 2186.94 $"mm"^2 = 3.39
 
 Plugging in values to solve for $F_a$:
 $ F_a &= 284.3568317 "psi" dot 3.396 "in"^2\
-  F_a &= 965.6758005 lbf
+  F_a &= 965.6758005 "lbf"
 $
 
 Therefore, the needed to be applied on the jig for the glue to ensure bonding is 965.6758005 lbf. To calculate the weight to be placed on top, assuming a distributed load, we can simply divide the force by gravity in terms of inches per second squared.
 
 $ &F = m dot a \
-  &965.6758005 lbf = m dot 386.09 "in"/"s"^2 \
+  &965.6758005 "lbf" = m dot 386.09 "in"/"s"^2 \
   &m = 2.501167605 "lbs" $$
   "which is multiplied by two for two plates": m = 5.00233521 "lbs"$
 
@@ -470,3 +345,5 @@ The weight of each jig can be neglected when determining stacking limits due to 
 To determine the limitation of the jig stacks, we must first determine how tall each jig is. A full jig consists of: the MPHX jig, the lamina jig, the MPHX plate, and the lamina. The whole assembly sits 0.51" tall. A stack of 100 jigs would be 51" high, which is obviously unreasonable. To determine a reasonable stack size, we decided to match the stack size to the speed of the modules we plan on producing.
 
 Since the goal is 100 plates in 30 minutes (with 5-10 minute application increments), a reasonable stack height was found to be 20 jigs. Using 20 jig stacks means that there will be 5 stacks total, leaving an extra 2 minutes of time for each stack to deal with any disruptions during the application process. The 20 jig stacks have a total height of 12.75", slightly more than 1', and fit well within the fume hood's limitations.
+
+

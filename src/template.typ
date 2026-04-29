@@ -7,14 +7,14 @@
 
 
 #let appendix(body) = {
-    set heading(numbering: "A.A.", supplement: [Appendix])
+    set heading(numbering: "I.I.", supplement: [Appendix])
     show heading.where(level: 1): set heading(supplement: "Appendix")
     show heading.where(level: 3): set heading(outlined: false)
 
   
   show heading.where(level: 1): it => {
     pagebreak()
-    [Appendix #counter(heading).display("A -") #it.body]
+    [Appendix #counter(heading).display("I -") #it.body]
   }
   counter(heading).update(0)
   body
@@ -248,7 +248,7 @@
   
 
   heading(level: 1, numbering: none, [Key Terms], bookmarked: false)
-  terms(..csv("../def.csv").sorted(), separator: [ -- ])
+  terms(..csv("../reference/def.csv").sorted(), separator: [ -- ])
 
 
   pagebreak()  
@@ -265,12 +265,20 @@
   }
 
   pagebreak()
-  bibliography("../refs.bib", full: false)
+  
+  {
+    show bibliography: set text(.8em)
+    // show bibliography: it => {
+    //   text(.8em, it.title)
+    // } 
+    bibliography("../reference/refs.bib", full: false)
+    
+  }
 
   {
     pagebreak(weak: true)
     show: appendix
-    include "../appendix.typ" 
+    include "../7-appendix.typ" 
   }
 
   
@@ -285,39 +293,11 @@
 
 
 
-// Display Functions
-
-#let fig(path, cap: none, width: auto) = figure(image(path, width: width), caption: cap)
-
-#let equation-counter = counter("equations")
-#let equ(number) = [Equation #numbering("⓵", number)]
-
-#let num = context{
-  equation-counter.step()
-  let disp = numbering("⓵", ..equation-counter.get().flatten()) 
-  $space disp$
-}
 
 
 
 
 
-#let pow(value) = [#math.times 10#super[#value]]
-#let powMod(input, order) = {
-let modded = calc.round(input*calc.pow(10, order), digits: 2)
-$modded ee(- order)$
-}
-
-
-// Rounding
-#let r0(num) = calc.round(num, digits: 0)
-#let r1(num) = calc.round(num, digits: 1)
-#let r2(num) = calc.round(num, digits: 2)
-#let r3(num) = calc.round(num, digits: 3)
-#let r6(num) = calc.round(num, digits: 6)
-
-
-// Shorthand
 #let then = $quad arrow.double quad$
 #let imp = $&=>$
 #let there = $therefore quad $
@@ -334,21 +314,7 @@ $modded ee(- order)$
 #let ref = "ref"
 #let cq = $, quad$
 
-// Chem
-#let CO2 = $"CO"_2$
-#let CO = $"CO"$
-#let SO2 = $"SO"_2$
-#let O2 = $"O"_2$
-#let OH = "OH"
-#let N2 = $"N"_2$
-#let H2 = $"H"_2$
-#let CH4 = $"CH"_4$
-#let H2O = $"H"_2"O"$
-#let H20 = $"H"_2"O"$
-#let N2 = $"N"_2$
-#let C3H8 = $"C"_3"H"_8$
-#let C5H12 = $"C"_5"H"_12$
-#let C2H5OH = $"C"_2"H"_5"OH"$
+
 #let lbmol = "lbmol"
 
 #let hb = $macron(h)$
@@ -364,7 +330,6 @@ $modded ee(- order)$
 #let gibb = $macron(g) ^ degree$
 
 
-// Units
 #let MPA = "MPa"
 #let MPa = "MPa"
 #let kip = "kip"
@@ -428,23 +393,5 @@ $modded ee(- order)$
 #let sun = "kJ/kg⋅K"
 
 
-// Notation
 #let dp = $d p$
 #let phi = math.phi.alt
-#let yy = $macron(y)$
-// #let ii = $hat(i)$
-// #let jj = $hat(j)$
-// #let kk = $hat(k)$
-// #let rr = $hat(r)$
-// #let RR = $arrow(R)$
-// #let FF = $arrow(F)$
-// #let ll(var) = $arrow(lambda)_(var)$
-// #let xp = $attach(->, tr: plus.circle)$
-// #let yp = $attach(arrow.t, tr: plus.circle)$
-// #let rp = $attach(arrow.ccw, tr: plus.circle)$
-// #let NV(var) = $arrow(N)_(var)$
-// #let NCA = $arrow(N)_(C A)$
-// #let NCB = $arrow(N)_(C B)$
-// #let (ax, ay, bx, by, cx, cy, dx, dy) = ($F_A_x$, $F_A_y$, $F_B_x$, $F_B_y$, $F_C_x$, $F_C_y$, $F_D_x$, $F_D_y$)
-#let (sfx, sfy) = ($Sigma F_x &= 0 $, $Sigma F_y &= 0 $)
-#let (sma, smb, smc, smd, sms) = ($Sigma M_A &= 0 $, $Sigma M_B &= 0 $, $Sigma M_C &= 0 $, $Sigma M_D &= 0 $, $Sigma M_"sec" &= 0  $)

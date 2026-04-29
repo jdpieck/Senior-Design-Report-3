@@ -1,110 +1,6 @@
-#import "bin/template.typ": *
-// 3.1) Statement of selection criteria used to design system __/5.0
-// Well defined requirements, design and requirements related, subsystem selection is clear
-// 3.2) Layout drawings/figures of system and subsystems __/7.5
-// Works with text to describe function, visuals elements to show function (arrows, expld views, etc.)
-// 3.3) Text description of system solution selected __/7.5
-// Clearly describes every aspect of how the design works
+== Design Function
 
 
-
-== Statement Of Selection Criteria <requirements>
-// === Updated Design requirements <requirements>
-
-In Report 1, our team identified six primary subsystems and evaluated two potential solutions for each. These subsystems formed the foundation of the module assembly process:
-
-- Adhesive Selection  
-- MPHX Jig  
-- Adhesive Application  
-- Lamina Application  
-- Feed Mechanism  
-- Clamping Mechanism  
-
-Following continued testing and design refinement, these subsystems were consolidated into three primary subsystems in the current design:
-
-- Jig Subsystem  
-- Roller Subsystem  
-- Feed Subsystem  
-
-The jig subsystem now encompasses both the MPHX jig and the lamina application method. The roller subsystem integrates adhesive application, while the feed subsystem is responsible for transporting MPHX plates through the system.
-
-=== Subsystem Refinement
-
-A key design change was the elimination of the dedicated clamping mechanism. Instead, the jig itself fulfills the dual roles of alignment and pressure application. During adhesive curing, the required clamping force is achieved by placing weights on top of stacked jigs.
-
-In Report 1, two clamping solutions were considered: alignment pins and a top clamping panel. The updated design achieves both alignment and pressure requirements using only the jig and externally applied weights, simplifying the system and reducing complexity.
-
-
-n Report 1, two potential solutions were evaluated for each subsystem. In @AdhesiveRoller, we discuss the selection of the adhesive application method, where the final decision was made between a stamping mechanism and a roller system, with the roller ultimately selected. In @FeedSection, we outline the transition from the previously selected locking roller mechanism to a simpler rolling track design to improve system simplicity and reliability. In @MPHX-jig, we justify the selection of the channel slot MPHjig, as it does not interfere with the adhesive application process. Finally, in @lamina-jig, we explain the decision to adopt a more manual lamina application method and describe the system designed to support this approach.
-
-=== Updated Design Requirements
-Since that report, our team has further honed our design requirements to select the best option for each subsystem. A major part of this transition involved moving from qualitative goals to specific, quantitative requirements. In @citeria in the "Must Have" section are our team's crucial initial (Report 1) design requirements.
-
-
-#figure({
-  show: standard-table
-  table(
-    columns: (3em, 1fr, 1fr, 1fr), 
-    // rows: 3,
-    none, 
-    [Must Have], [Should Have], [Nice to Have],
-    rotate(reflow: true, -90deg)[System Functions],
-    [
-      - Predictable adhesive application
-      - Predictable alignment
-      - No leaking
-        - Capable of handling >10psig
-      - Does not block channels
-    ],
-    [
-      - Apply lamina
-      - Correct alignment
-        - 0.5mm tolerance
-    ],
-    [
-      - Same gluing mechanism for both Team 14 and Team 2
-    ],
-    rotate(-90deg)[System Qualities],
-    [
-      - Predictable curing time
-      - Reliable
-        - 1000+ completed cycles
-    ],
-    [
-      - Speedy cycle time
-      - Large batch size (2-4)
-      - Small form factor 
-        - Fits on bench-top
-      - Non-toxic glue
-    ],
-    [
-      - Fast curing time
-      - Cheap materials and manufacturing process
-      - Overall design integrates smoothly with the jig design of Team 2
-    ],
-  )
-},
-  caption: [System Requirements (Report 1)]
-) <citeria>
-
-Through collaboration with our sponsor, we established that *the system must be capable of producing one full heat exchanger (consisting of 1,000 modules) in a single 8-hour working day*. Additionally, *the system must be durable enough to produce at least 10 heat exchangers over its lifespan*, and the roller must apply a sufficient, consistent coating over the ridges of the MPHX plate. We further detail in the discussion section the calculations that prove our system can achieve these design requirements.
-
-Our qualitative requirements are as follows:
-- Predictable MPHX-lamina alignment 
-- Predictable adhesive application
-- Minimal channel blockage 
-These requirements were considered in the design process to ensure that our system was robust enough to meet these specifications. 
-
-
-=== Adhesive Selection 
-
-Our design was in a large part determined by our choice of adhesive, as the cure times and viscosity would dictate our application methods. Our team continued adhesive testing, evaluating a total of five different adhesives. During these tests, four of the five candidates failed to bond the dissimilar materials (the ABS MPHX plate and the Polycarbonate film); these failed samples were easily ripped apart by hand. 
-
-The only adhesive that successfully bonded the two materials was *Oatey’s Milky Clear ABS Cement*. Once identified, we proceeded to pressure test the bond to verify it could withstand operating pressures of at least 10 psi. We utilized an ABS pipe from our sponsor, tapped at one end, and adhered the film to the other. After allowing it to cure, we pumped the vessel up to 50 psi in increments of 5 psi without a single failure. This successful test verified that a solvent-based adhesive was the correct path and allowed us to finalize the designs for the remaining subsystems. 
-
-
-#pagebreak()
-== System and Subsystem Layout <system-layout>
 
 === Master Assembly 
 
@@ -183,12 +79,12 @@ The top rollers (or pressure rollers) are a part of the roller super-structure a
 caption: [Top roller additional views],
 [#image("images/PressRollSection.png", width: 90%)]) <PressureRollerSection>
 
-The base plate serves as a connector between the two feed assemblies, the adhesive roller, and the pressure roller assembly. The bar to which the pressure rollers are attached is both hinged (3) and latched (2), allowing it to be raised for easy access to the adhesive vat for cleaning and covering between batches.
+The base plate serves as a connector between the two feed assemblies, the adhesive roller, and the pressure roller assembly. The bar to which the pressure rollers are attached is both hinged and latched, allowing it to be raised for easy access to the adhesive vat for cleaning and covering between batches.
 
 ==== Roller for Adhesive <AdhesiveRoller> 
 The adhesive roller assembly serves as the core of our design. This subsystem is responsible for applying adhesive to the MPHX plates, enabling the lamina to bond to the plate surface.
 
-When choosing our application method we previously weighed the pros and cons of a roller versus a stamp. Because we selected a solvent-based adhesive with a significant viscosity (500--1500 cP @OateySpecialMedium), we opted for a roller design. For reference, our adhesive is much thicker than maple syrup, which typically has a viscosity of only 150--200 cP @ViscosityChart; a stamp would not be able to properly distribute such a viscous fluid. 
+When choosing our application method, we previously weighed the pros and cons of a roller versus a stamp. Because we selected a solvent-based adhesive with a significant viscosity (500--1500 cP @OateySpecialMedium), we opted for a roller design. For reference, our adhesive is much thicker than maple syrup, which typically has a viscosity of only 150--200 cP @ViscosityChart; a stamp would not be able to properly distribute such a viscous fluid. 
 
 As seen in @report1, our original design featured a roller submerged in a vat of adhesive, over which the MPHX plates would pass. This design is very similar to adhesive rollers on the market made for applying adhesive to large surfaces. For the final design, we have maintained and implemented this same core concept. @AdhesiveRollerDia shows the CAD model of the adhesive roller subsystem, with key components labeled and numerically referenced.
 
@@ -345,3 +241,10 @@ The steel shim stock (2) is connected along the lamina jig sides with glue and M
 We opted for a system that facilitates easy manual assembly. Once the plate runs over the adhesive roller in its jig, the user picks it up the upside-down plate jig and places it onto the lamina jig. This jig is designed with *corner location features* so the user can easily and accurately align the lamina. Because the jig is slightly raised, when pressure is applied to the assembled stack, the raised portions press the lamina directly onto the ridges of the MPHX plate. Finally, a weight is placed on top of the assembly for the 15-minute fixture time @OateySpecialMedium to ensure a secure bond.
 
 
+
+
+
+
+
+== Bill of Materials
+#include "3.2-bom.typ"

@@ -19,7 +19,7 @@
     ) <drawing-ouline>
   ]
   
-  let drawing-data = csv("../drawings.csv", row-type: dictionary)
+  let drawing-data = csv("../reference/drawings.csv", row-type: dictionary)
 
   for entry in drawing-data {
     let path = "../drawings/" + entry.name + ".pdf"

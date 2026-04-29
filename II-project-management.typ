@@ -1,14 +1,9 @@
-#import "bin/template.typ": *
-// 6.1) Appropriate tasks identified over 2 quarters __/5.0
-// 6.2) Updated Gantt chart for 2 quarters __/5.0
-// 6.3) Critical path method analysis __/5.0
-
 == Project Timeline 
 Due to the unconventional nature of our project, we had to conduct our design and predicted manufacturing processes with a similar level of unconventionality. @tasks shows the list of tasks for this project as identified at the time of this report being written, including those that have already been completed and those projected to take place next quarter. Now that we have a better understanding of the tasks for manufacturing, troubleshooting, and preparing for the Senior Design Showcase next quarter, our task list from Report 1 has been greatly expanded upon. Newly identified tasks include more detailed descriptions of what we need to manufacture for each subsystem (jig, feed, electrical, etc), and deadlines for materials to submit to the Senior Design Showcase organizers.
 
 Completed tasks have been indicated with a check mark at the end of each line. While the exact order of the Gantt Chart does not match this list, this is due to the presence of overlapping tasks and subtasks in the chart's structure. This is allowable, however, since the flexible nature of Gantt Charts allows for slight adjustments in task deadlines. This allows the list below to still reflect the subsequently presented Gantt Chart.
 
-#include "5.1-tasks.typ"
+#include "II.I-tasks.typ"
 
 #page(
   width: auto,
@@ -17,8 +12,7 @@ Completed tasks have been indicated with a check mark at the end of each line. W
   header: none,
   margin: 0pt,
 
-  image("images/GanttChart.pdf", width: 10in) 
-
+  image("images/GanttChart.pdf", width: 8.5in) 
 )
 
 == Critical Path

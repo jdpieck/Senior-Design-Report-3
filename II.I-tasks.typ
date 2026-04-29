@@ -1,7 +1,3 @@
-#import "bin/template.typ": *
-
-// #set text(.85em)
-
 #let accent = rgb("#063e7e")
 
 #let standard-table(body) = {
