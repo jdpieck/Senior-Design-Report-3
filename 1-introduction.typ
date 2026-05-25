@@ -30,3 +30,19 @@ Once prototype testing is complete, and assuming favorable results, this device 
 
 == Concept of Operations
 //insert flow chart 
+
+The glue dispensing jig can be divided into four main operational components: the feed system, the roller assembly, the jig, and the electrical box.
+
+Before the adhesive is applied to the MPHX plates, they are loaded into the MPHX jig, which transports the plates through the system during application and facilitates proper lamina adhesion. The plates are inserted into channels within the jig and secured by the excess material (rails), which hold them in place throughout processing. This design ensures that adhesive is applied only to the required regions (i.e., the ridges).
+
+After loading, the motor is turned on via the switch on the electrical box. The MPHX jig is then manually fed into the system until it engages with the rollers, at which point the motor takes over and pulls the jig through the adhesive application stage. Once the jig has fully passed through the rollers, it is removed by hand from the feed rails and placed onto the lamina jig, where pre-positioned lamina are ready for bonding.
+
+*Overall, the general workflow of our system is as follows:* 
+
+@flowchart illustrates the step-by-step operational workflow of the system, detailing the sequence from jig setup through adhesive application, stacking, and system cleaning.
+
+#figure(
+  caption: [System Operation Workflow Diagram],
+  [#image("images/WorkflowDiagram.png")]) <flowchart>
+
+  

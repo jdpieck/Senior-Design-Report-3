@@ -24,9 +24,9 @@ All samples used for pressure testing are machined to provide an appropriate adh
 + Weigh the amount of adhesive
 + Create a mixed solvent using the percentages in the
  adhesive SDS. Add acetone first to the mixture to prevent splashing (in a separate sealable metal container). 
-+ Add solvent mixture 10% (by weight)
++ Add solvent mixture 20% (by weight)
 + Time pot life &amp; bond a test sample
-+ Repeat for 25% and 50% dilution levels
++ Repeat for 30% and 40% dilution levels
 
 ==== Experiment 3: Reviving The Pot
 
@@ -38,18 +38,34 @@ All samples used for pressure testing are machined to provide an appropriate adh
 + Time the pot life and evaluate bond strength by preparing a test sample.
 
 
-=== Data Collection
+=== Data Collection <results>
 For Experiment 1, we will measure the mass of solvent that evaporates after a 5-minute pot life. This will allow us to estimate the solvent evaporation rate and determine how much solvent must be added back to revive the pot.
 
 For Experiment 2, we will measure the pot life of three different adhesive dilutions. These results will help determine whether pre-dilution is a better approach than pot revival. We will also pressure test bonded samples at 40 psi to replicate the force at the glue joint in the actual MPHX modules. (The inner wall of the ABS tube samples has been machined to increase the inner diameter such that 40 psi corresponds to the force experienced at the glue joint in the module at 10 psi.) This test ensures that pre-dilution does not adversely affect adhesive strength.
 
 For Experiment 3, we will measure the pot life of the adhesive after it has been revived. We will also bond a test sample after revival and pressure test it at 40 psi, as in the previous experiment. These results will allow us to determine whether pre-dilution or pot revival is the more effective approach.
 
+*Results Of Adhesive Testing*
+
+Adhesive Pot Life: 5 minutes 
+
+20% Dilution Pot life: 7 minutes
+
+30% Dilution Pot Life: 10 minutes 
+
+40% Dilution Pot Life: 15 minutes 
+
+Pot Revival: Success with any amount of solvent 
+
+Important Observations:
+
+It is important to note that the constant airflow in the fume hood made it impossible to accurately determine the adhesive evaporation rate because the highly sensitive scale could not obtain stable measurements. It was also observed that the adhesive formed a skin over the surface of the vat, which protected the adhesive underneath from evaporation. Disturbing this skin through mixing significantly increased the pot life.
+
+
 === Data Analysis
-All data will be taken on paper (pot life time and weight of adhesive over the 5 min evaporation testing) while in the fume hood, and will be transferred over to an Excel sheet after experiments have been concluded. Our team will assess the most effective method for extending pot life, whether that is initially diluting the adhesive or attempting to revive it after partial drying. We will base our decision on the bond strength of the adhesive following pressure testing of all bonded samples, as well as the extent to which each method increases pot life.
+As seen in @results, the adhesive’s pot life was primarily affected by the formation of a skin over the vat. When this skin formation was disrupted, the adhesive remained operational. The pot began to skin over after approximately 5 minutes, but it is suspected that the constant mixing caused by the rollers will hinder skin formation and make pot life less of a concern.
 
-We expect that the bond strength of the adhesive will be largely unaffected by dilution or revival, since the same solvents are being reintroduced into the system. These solvents primarily act to mold the polymers together, allowing them to form a seal. Additionally, the solvent mixture contains a small amount of ABS, which is commonly used in pipe fitting applications to fill gaps rather than provide significant adhesive strength.
-
+The dilution tests were successful, and any dilution used would only further extend the pot life. As previously mentioned, the pot revival process was also successful. The addition of solvent, combined with mixing, removed the skin from the vat. This presents a promising possibility, as the vat could be sprayed with solvent while the rollers break up the skin, or the adhesive could be stirred with a disposable tool to restore usability.
 
 === Safety Considerations
  All experiments will be conducted using proper personal protective equipment (respirators, coveralls, and sealed eye protection) and within a fume hood.

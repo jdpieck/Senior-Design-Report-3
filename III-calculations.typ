@@ -138,7 +138,7 @@ $0.6055 dot 6 "lbf" = 3.633 "lbf" $
 
 The jig rides on lubricated ball bearings, so it is not expected that the frictional resistance of the bearings will exceed this force. As a result, the jig should pass through the roller without slipping, especially since the bearings are operating under relatively low loads and low rotational speeds.
 
-=== Fatigue Analysis On Springs 
+=== Fatigue Analysis On Springs <springfatigue>
 
 We will analyze the fatigue of the spring components in the pressure rollers using the Goodman criterion to ensure that our apparatus can withstand 5,000 cycles (the number of cycles required to create 10 heat exchangers). The springs we are using experience a force of 0.5/3 lbf, or 1.67 lbf per millimeter of compression @W100CS119Inch. In @SpringLoad, we determined that the load per spring is 1.5 lbf for consistent glue application. We achieved this force by compressing the spring 0.375", which applies a constant load of 1.5 lbf to each spring. The feed is constrained in such a way that the springs will only experience a few millimeters of additional compression when a jig passes underneath. For this calculation, we will assume 2 mm of additional compression, which will be the applied alternating load on the spring.
 
@@ -240,7 +240,7 @@ $
 
 The calculations were performed using MATLAB code, which can be found in @appx-spring. The spring compression was varied from 1 mm to 4 mm to evaluate the resulting fatigue safety factor. The worst-case condition occurred at a compression of 4 mm, which resulted in a safety factor of 1.21. According to the Goodman criterion, this safety factor corresponds to an infinite fatigue life, indicating that the spring will successfully withstand the required 5000 cycles.
 
-=== Deformation Analysis of Axle
+=== Deformation Analysis of Axle <defofaxle>
 We require our machine to manufacture at least 5 full heat exchangers, which at 1,000 plates per heat exchanger and 2 plates per cycle, requires the roller to successfully manufacture for
 $
   5 "HX" times 1000 "plates/HX" times (1 "cycle")/(2 "plates") = 5000 "cycles".
@@ -277,7 +277,7 @@ The diagrams in @shaft-force-diag show the maximum bending moment occurs in the 
 
 We also preformed finite element analysis on the part as seen in @sim.
 
-=== Axle Life Cycle Analysis
+=== Axle Life Cycle Analysis <axlelife>
 The axle has to last for at least 5000 cycles according to Requirement 3. Given that AISI 1018 steel has an ultimate tensile strength of $S_"ut" = 64 "ksi"$ @ShigleysMechanicalEngineering, the ultimate strength is given by
 $
   S_e = k_a k_b S_e' = k_a k_b (S_("ut"))/2,

@@ -23,15 +23,7 @@ Some of these overarching subsystems can be broken down into further subassembli
   caption: [Master Assembly Isometric View],
   [#image("images/MasterAssembly.png", width: 90%)]) <MasterAssembly> 
 
-*Overall, the general workflow of our system is as follows:* 
 
-@flowchart illustrates the step-by-step operational workflow of the system, detailing the sequence from jig setup through adhesive application, stacking, and system cleaning.
-
-#figure(
-  caption: [System Operation Workflow Diagram],
-  [#image("images/WorkflowDiagram.png")]) <flowchart>
-
-  
 The MPHX-loaded jig moves through the system as shown in @JigPath.
   #figure(
   caption: [Jig Path],
@@ -240,11 +232,34 @@ The steel shim stock (2) is connected along the lamina jig sides with glue and M
 
 We opted for a system that facilitates easy manual assembly. Once the plate runs over the adhesive roller in its jig, the user picks it up the upside-down plate jig and places it onto the lamina jig. This jig is designed with *corner location features* so the user can easily and accurately align the lamina. Because the jig is slightly raised, when pressure is applied to the assembled stack, the raised portions press the lamina directly onto the ridges of the MPHX plate. Finally, a weight is placed on top of the assembly for the 15-minute fixture time @OateySpecialMedium to ensure a secure bond.
 
+== Requirements Met
+//how are the requirements met
+//needs to be written
+For reference throughout this section, our system design requirements can be found in @quantrequirements.
+
+=== Requirement 1 (Adhesive Strength)
+To determine if our adhesive would hold for the required pressure, our team performed pressure tests on bonded samples (ABS pipe bonded to PC film). Our experimental setup can be found in @experimentalsetup. Three specimens were pressurized to 50 psig in 5 psi increments. At each increment, the pressure was held for 5 minutes. No samples exhibited failure or leakage throughout the testing.
 
 
 
+  #figure(
+  caption: [Experimental Setup],
+  [#image("images/Setup.png", width: 40%)]) <experimentalsetup>
+  
+Using this test our team was also able to verify that the selected adhesive can withstand the required 10 psig for successful operation of the heat exchanger. Because the system will operate with water flowing through it, compatibility with water was also evaluated. The selected adhesive is designed for plumbing applications, confirming its suitability for this use case.
 
+=== Requirement 2 (High Throughput)
+//insert cycle testing results 
+=== Requirement 3 (Long Life Cycle)
+To assess whether the system would meet its required lifecycle, the team performed stress and fatigue analyses on the components with the highest risk of failure, specifically the top roller springs and the roller axle. These calculations are presented in @springfatigue, @defofaxle, and @axlelife.
 
+All results yielded large safety factors and indicate that the components are expected to have infinite fatigue life under the assumed loading conditions.
+
+=== Requirement 4 (Form Factor)
+Due to the harmful solvent in the adhesive, we are using our system must be used in a standard-sized fume hood. which has dimensions of 5' length $times$ 2' width $times$ 2.5' height. Our final system is 3.5' length $times$ 0.75' width $times$ 0.58' height, which can easily fit in the fume hood.
+=== Requirement 5 (MPHX-Lamina Alignment)
+//Must align within 1.5 mm laterally and 3 mm longitudinally.
+//needs to be written 
 
 == Bill of Materials
 #include "3.2-bom.typ"
