@@ -28,12 +28,14 @@ The test operator should call out when they perform every procedure requiring a 
 // The final time will be multiplied 100 to estimate the amount of time it would take to complete 1000 lamina-plate modules. This is the estimated final length of a workday required to complete a full heat exchanger device via our glue application system.
 
 === Data Collection
-This test will measure an approximate time to successfully manufacture a subset of ten plate-lamina modules. In order to estimate the final time to complete 1000 lamina-plate modules, we will extrapolate the subset time measured with the stopwatch as mentioned in the testing procedure. The purpose of this collection is to decide if a user of our device would be able to complete a full heat exchanger in an 8-hour work day as per the design requirements.
+This test will measure an approximate time to successfully manufacture a subset of ten plate-lamina modules. In order to estimate the final time to complete 1000 lamina-plate modules, we will extrapolate the subset time measured with the stopwatch as mentioned in the testing procedure. The purpose of this collection is to decide if a user of our device would be able to complete a full heat exchanger in an 8-hour work day as per the design requirements. Our team timed the procedure for a singular wet run of a module to take 32 seconds. 
 
 === Data Analysis
 For proper estimation of the average time needed to complete a full heat exchanger, this test should be repeated at least five times to create a suitable population from which we will analyze work time. As it would be impractical to conduct multiple full scale cycle time tests (with 1000 modules manufactured per test), we will be extrapolating the time to complete a full heat exchanger from a tests of time to complete to lamina-plate modules. 
 
 In addition to impractical time requirements for repeated full-scale testing, this smaller-scale test takes into account our limited adhesive supply by limiting waste and minimizing testing cost. 
+
+Due to the large amount of filament required and the long print time for each jig, our team was only able to produce one jig. As a result, we estimated the time required to assemble 1000 modules based on timing the gluing process for a single module, which took 32 seconds. This corresponds to approximately two modules per minute, or four plates per minute. At this rate, bonding 1000 plates would take about 4 hours. When accounting for cleaning time and breaks, the total assembly time for a heat exchanger is estimated to be around 8 hours, though completing this in a single session is not recommended due to solvent exposure.
 // This also leaves more adhesive to be used in other testing procedures.
 
 === Safety Considerations
@@ -44,6 +46,6 @@ To clean up after the test, acetone is required to clean the roller and vat comp
 === Limitations  
 // While this smaller scale test does increase the efficiency by which we can test manufacturing time, the nature of extrapolation means our test must make assumptions about the manufacturing process that may not always be true. 
 
-The biggest assumption is that the rate at which lamina-plate modules are assembled is consistent throughout the course of the working period. This assumption may not always be true since it does not account for operator breaks or fatigue throughout the process, leading to slower manufacturing times as the work period continues.
+The biggest assumption is that the rate at which lamina-plate modules are assembled is consistent throughout the course of the working period. This assumption may not always be true since it does not account for operator breaks or fatigue throughout the process, leading to slower manufacturing times as the work period continues. It also doesn't account for time to revive the pot and clean up as the manufacturing goes on. 
 
 // These such assumptions may impact the calculated heat exchanger manufacturing time by not accounting for some variation in external conditions during the tests. Therefore, our calculated times may not match the actual time of a full-scale test. This would mean improper comparison to our 8-hour design requirement. However, this test assumes those deviations from a full-scale test would be small enough to not be deemed statistically significant for our analysis.

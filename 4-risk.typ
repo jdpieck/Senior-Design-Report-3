@@ -49,13 +49,13 @@ _Assumptions_\
 - The time required to process 10 jigs can be extrapolated to estimate the time to complete 1000 jigs
 
 _Observed Failure_\
-
+There was no observed failure, it took 30 seconds to glue 4 plates during testing, and so the 8 hour work day was well within the design requirements.
 
 _Design Modifications_\
-
+No modifications were needed to made to the roller, electrical, or feed system since no failure was observed.
 
 _Conclusions_\
-
+In conclusion, the cycle time was not a failure mode within our system. While cycle time was a major risk element in our DFMEA due to its potential setbacks in the event of failure; the testing proved that it actually was not a major risk.
 
 === Jig Bonding Testing
 
@@ -76,13 +76,13 @@ _Assumptions_\
 - The roller applicator may not be as precise/accurate as we would like which results in the unwanted glue distribution
 
 _Observed Failure_\
-
+The observed failure during full system testing was that glue got on the stopping ridges of the MPHX jig. This is the same location at which we identified the highest risk for jig bonding. The glue on the edge however was not an issue due to the fact that the (PLA) jig was not compatible with the adhesive and PC lamina.
 
 _Design Modifications_\
-
+Modifications for the jig 
 
 _Conclusions_\
-
+In conclusion, the adhesive compatibility 
 
 //5.2) Appropriate analysis and presentation of DFMEA results and top risks identified, appropriate management of top risks /10.0
 //5.3) Well thought-out interpretation of result and discussion

@@ -10,7 +10,7 @@ The objective of this prototype test plan is to make sure we address the most cr
 // ^^^ includes description of how to put the jig through the feed system that can be used for other testing procedures
 
 // #pagebreak()
-== Jig Alignment Testing
+== Jig Alignment Testing //remove unnessary 
 #include "5.3-jig-alignment.typ"
 
 // #pagebreak()
