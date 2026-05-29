@@ -231,13 +231,18 @@
   {
     show: fancy-outline
     outline(
+      title: [Main Table of Contents],
       target: heading.where(supplement: [Chapter])
       .or(heading.where(supplement: [Section]))
     )
   }
+  pagebreak()
   {
     show: fancy-outline
-    outline(title: "Appendix", target: heading.where(supplement: [Appendix]))  
+    outline(
+      title: "Appendix Table of Contents", 
+      target: heading.where(supplement: [Appendix])
+    )  
   }
 
   pagebreak(weak: false)

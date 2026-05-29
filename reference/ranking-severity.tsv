@@ -1,0 +1,11 @@
+Ranking	Effect	Design FMEA Severity
+10	hazardous 	any user/operator harm
+9	very high	non functional, need to rebuild/design, significant time and money loss
+8	high	system damage, need for new parts (lots of money + time)
+7	high	system fails to meet design specifications and causes operator discomfort (questionable functionality)
+6	moderate	system works but not to design specifications anymore
+5	low	minor part replacements (some money + time)
+4	very low	minor adjustments, component tuning/calibration/reset (still functional)
+3	minor	inconvience, noise/slower process still fuctional
+2	very minor	functional but cosmetic (or non functional flaws)
+1	none	no effect

@@ -15,7 +15,7 @@ Some of these overarching subsystems can be broken down into further subassembli
 
 #figure(
   caption: [Master Assembly Breakdown],
-  [#image("images/MasterAssemblyFlow.png", width: 90%)]) <MasterAssemblyFlow>
+  [#image("images/MasterAssemblyFlow.png", width: 70%)]) <MasterAssemblyFlow>
 
   
  @MasterAssembly is the CAD model of our completed design. It features all subsystems of our finalized jig design. 
@@ -30,12 +30,12 @@ The MPHX-loaded jig moves through the system as shown in @JigPath.
   [#image("images/SystemPassThrough.png", width: 90%)]) 
   <JigPath>
 
-#pagebreak()
-  As seen in @CrossSection, the MPHX modules come into contact with the adhesive rollers at the same time the jig comes into contact with the top idler rollers. The rollers on top provide a constant force, ensuring that the modules always remain in  contact with the adhesive rollers as they pass through. As the rollers rotate, they are constantly re-coated in adhesive from the vat, and the coat is made uniform using a squeegee detailed in @AdhesiveRoller. The entire system is driven by a single 12V motor with adjustable speed using an auxiliary electrical control box, which can be plugged into an AC outlet.
+// #pagebreak()
+As seen in @CrossSection, the MPHX modules come into contact with the adhesive rollers at the same time the jig comes into contact with the top idler rollers. The rollers on top provide a constant force, ensuring that the modules always remain in  contact with the adhesive rollers as they pass through. As the rollers rotate, they are constantly re-coated in adhesive from the vat, and the coat is made uniform using a squeegee detailed in @AdhesiveRoller. The entire system is driven by a single 12V motor with adjustable speed using an auxiliary electrical control box, which can be plugged into an AC outlet.
 
-  #figure(
-  caption: [Critical System Cross Section],
-  [#image("images/Cross Section.png", width: 90%)]) 
+#figure(
+caption: [Critical System Cross Section],
+[#image("images/Cross Section.png", width: 90%)]) 
   <CrossSection>
 
 
@@ -112,13 +112,15 @@ The electrical assembly provides power and speed control for the motor. The elec
   caption: [Annotated Electrical Box Assembly],
   [#image("images/Annotated Elec Assem Drawing.png")]) <ann-elec-assem>
 
-  #text(size: 1.0em, weight: "bold")[DC Power Supply and Speed Controller] 
-  
+  // #text(size: 1.0em, weight: "bold")[DC Power Supply and Speed Controller] 
+*DC Power Supply and Speed Controller*
+
 Since the system controlled by the electronics is a simple roller than only needs to be turned on and off, we found it unnecessary to create a complex circuit to power the entire jig. Instead, we settled on an off-the-shelf speed controller, DC power supply, and socket. These systems will be secured to the electrical box.
 
 For the system to operate as intended, wires will be soldered from the socket to the DC power supply and the dial and switch to the speed control board (not pictured). The speed controller will be directly powered by the DC power supply, meaning the power supply will be to the terminals on the speed controller board.
 
- #text(size: 1.0em, weight: "bold")[ Electrical Box] 
+ // #text(size: 1.0em, weight: "bold")[ Electrical Box] 
+*Electrical Box*
  
 The primary purpose of this box is to keep sensitive wiring safe from outside disturbances and keep all components contained to a single, organized space. The box also hides all elements unrelated to the direct operation and control of the roller, such as the switch and dial of the speed controller. Therefore, the electrical box is the structure that houses all previously discussed electronic elements. 
 

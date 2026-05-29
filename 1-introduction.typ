@@ -16,8 +16,8 @@ The primary task of this project is to identify suitable materials and assembly 
 - The bonded assembly must withstand internal water pressures of at least 10 psi without leakage.
 - The adhesive and bonded joints must tolerate repeated temperature and pressure cycling over the expected service life of the product.
 
+#pagebreak(weak: true)
 == Stakeholder Analysis
-
 The primary goal of our project is to serve as a proof of concept. The current method used by the WCEC (Western Cooling and Efficiency Center) to adhere the MPHX plates to the PC film is laser welding, which is both expensive and inefficient. As a result, the WCEC has been exploring more cost-effective and faster alternatives. This is where our system comes in—to investigate the concept of gluing the plates to the lamina. The goal of our system is to demonstrate that this method is a scalable and practical option.
 
 Currently, the WCEC is working with a company, R&D Plastics, to injection mold the MPHX plates. Individuals within this company routinely communicate with our sponsor to make improvements to their manufacturing process. They are also involved in this proof-of-concept effort, meaning they will interact with our device to refine their process and better accommodate ours. For example, due to the current manufacturing method, the MPHX plates are produced with bowing, which their team is actively working to correct. Our current design includes built-in accommodations for the bowing in the plates, which may soon become unnecessary due to ongoing improvements by our sponsor’s contractors.
@@ -37,6 +37,7 @@ Before the adhesive is applied to the MPHX plates, they are loaded into the MPHX
 
 After loading, the motor is turned on via the switch on the electrical box. The MPHX jig is then manually fed into the system until it engages with the rollers, at which point the motor takes over and pulls the jig through the adhesive application stage. Once the jig has fully passed through the rollers, it is removed by hand from the feed rails and placed onto the lamina jig, where pre-positioned lamina are ready for bonding.
 
+#pagebreak()
 *Overall, the general workflow of our system is as follows:* 
 
 @flowchart illustrates the step-by-step operational workflow of the system, detailing the sequence from jig setup through adhesive application, stacking, and system cleaning.

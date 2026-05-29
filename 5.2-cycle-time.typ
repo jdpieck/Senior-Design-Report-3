@@ -30,12 +30,15 @@ The test operator should call out when they perform every procedure requiring a 
 === Data Collection
 This test will measure an approximate time to successfully manufacture a subset of ten plate-lamina modules. In order to estimate the final time to complete 1000 lamina-plate modules, we will extrapolate the subset time measured with the stopwatch as mentioned in the testing procedure. The purpose of this collection is to decide if a user of our device would be able to complete a full heat exchanger in an 8-hour work day as per the design requirements. Our team timed the procedure for a singular wet run of a module to take 32 seconds. 
 
+=== Results
+Due to the large amount of filament required and the long print time for each jig, our team was only able to produce one jig. As a result, we estimated the time required to assemble 1000 modules based on timing the gluing process for a single module, which took 32 seconds. This corresponds to approximately two modules per minute, or four plates per minute. At this rate, bonding 1000 plates would take about 4 hours. When accounting for cleaning time and breaks, the total assembly time for a heat exchanger is estimated to be around 8 hours, though completing this in a single session is not recommended due to solvent exposure.
+
+
 === Data Analysis
 For proper estimation of the average time needed to complete a full heat exchanger, this test should be repeated at least five times to create a suitable population from which we will analyze work time. As it would be impractical to conduct multiple full scale cycle time tests (with 1000 modules manufactured per test), we will be extrapolating the time to complete a full heat exchanger from a tests of time to complete to lamina-plate modules. 
 
 In addition to impractical time requirements for repeated full-scale testing, this smaller-scale test takes into account our limited adhesive supply by limiting waste and minimizing testing cost. 
 
-Due to the large amount of filament required and the long print time for each jig, our team was only able to produce one jig. As a result, we estimated the time required to assemble 1000 modules based on timing the gluing process for a single module, which took 32 seconds. This corresponds to approximately two modules per minute, or four plates per minute. At this rate, bonding 1000 plates would take about 4 hours. When accounting for cleaning time and breaks, the total assembly time for a heat exchanger is estimated to be around 8 hours, though completing this in a single session is not recommended due to solvent exposure.
 // This also leaves more adhesive to be used in other testing procedures.
 
 === Safety Considerations

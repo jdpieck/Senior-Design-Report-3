@@ -38,28 +38,40 @@ All samples used for pressure testing are machined to provide an appropriate adh
 + Time the pot life and evaluate bond strength by preparing a test sample.
 
 
-=== Data Collection <results>
+=== Data Collection 
 For Experiment 1, we will measure the mass of solvent that evaporates after a 5-minute pot life. This will allow us to estimate the solvent evaporation rate and determine how much solvent must be added back to revive the pot.
 
 For Experiment 2, we will measure the pot life of three different adhesive dilutions. These results will help determine whether pre-dilution is a better approach than pot revival. We will also pressure test bonded samples at 40 psi to replicate the force at the glue joint in the actual MPHX modules. (The inner wall of the ABS tube samples has been machined to increase the inner diameter such that 40 psi corresponds to the force experienced at the glue joint in the module at 10 psi.) This test ensures that pre-dilution does not adversely affect adhesive strength.
 
 For Experiment 3, we will measure the pot life of the adhesive after it has been revived. We will also bond a test sample after revival and pressure test it at 40 psi, as in the previous experiment. These results will allow us to determine whether pre-dilution or pot revival is the more effective approach.
 
-*Results Of Adhesive Testing*
+=== Results <results>
+For Experiment 1, we were unable to accurately determine the adhesive evaporation rate. The highly sensitive scale could not obtain stable measurements due to the constant airflow in the fume hood. In addition, we observed that the adhesive formed a skin over the surface of the vat, which protected the adhesive underneath from evaporation. Disturbing this skin through mixing significantly increased the pot life.
 
-Adhesive Pot Life: 5 minutes 
+For Experiment 2, we recorded the following pot life times. 
 
-20% Dilution Pot life: 7 minutes
+#figure(
+  table(
+  columns: (auto, auto),
+  inset: 9pt,
+  align: (left, center),
+  stroke: 0.5pt + luma(120),
+  fill: (x, y) => if y == 0 { rgb("e0e0e0") } else { none },
+  
+  // Table Header
+  [*Material / Condition*], [*Pot Life*],
+  
+  // Table Data
+  [Adhesive (Undiluted)], [5 minutes],
+  [20% Dilution], [7 minutes],
+  [30% Dilution], [10 minutes],
+  [40% Dilution], [15 minutes],
+),
+caption: [Adhesive Dilution Testing Results]
+)
 
-30% Dilution Pot Life: 10 minutes 
+For Experiment 3, we found that the pot could be successfully revived any amount of solvent .
 
-40% Dilution Pot Life: 15 minutes 
-
-Pot Revival: Success with any amount of solvent 
-
-Important Observations:
-
-It is important to note that the constant airflow in the fume hood made it impossible to accurately determine the adhesive evaporation rate because the highly sensitive scale could not obtain stable measurements. It was also observed that the adhesive formed a skin over the surface of the vat, which protected the adhesive underneath from evaporation. Disturbing this skin through mixing significantly increased the pot life.
 
 
 === Data Analysis

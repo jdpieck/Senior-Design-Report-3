@@ -1,0 +1,12 @@
+Ranking	Effect	Design FMEA Detection
+10	undetectable	Impossible to detect until failure
+9	Extremely diffcult to detect	Very challenging to detect prior to failure. Detectable by trained personel after detailed inspection while running. Or immediately after running
+8	 Very Difficut to detect	Detectable by anyone after close extremely close inspection
+7	"
+Difficult to Detect"	Only detectable with inspection while running
+6	Very low Detectability	Failure is only detectable with the full system assembled
+5	Low Detectability	Failure detectablity can be seen through physical individual part/component testing
+4	Moderately detectable	Failure is detectable by accurate calculations and simulations (FEA) and is dirrectly related to operating conditions
+3	Easily detectable	Easily calculatable or common sense detectable failure from design analysis
+2	Very Easily detectable	Visible failure which can be seen by the user/operator
+1	Detection isn't applicatible/failure prevention	From literature, calculations, experiementaion, or otherwise the part will not fail and is proven not to fail through design standards (particular known materials or practices)
