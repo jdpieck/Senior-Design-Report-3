@@ -11,7 +11,7 @@ All samples used for pressure testing are machined to provide an appropriate adh
 
 + Place the scale and aluminum foil-lined metal container in the fume hood
 + Retrieve Oatey ABS Cement from flammables storage
-+ Fill tinfoil revisor partially with Oatey ABS Cement
++ Fill tinfoil reservoir partially with Oatey ABS Cement
 + Record the mass at 30-second intervals over a 5-minute period
 + Calculate the total mass loss due to solvent evaporation after 5 minutes
 

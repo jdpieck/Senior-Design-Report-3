@@ -5,6 +5,8 @@ To determine the most failure prone components of our design and to help mitigat
 #import "src/risk-tables.typ": *
 #risk-table(num-entries: 3)
 #ranking-criteria("detection")
+
+
 The full DFMEA with specified evaluation criteria can be seen in (appendix). The notable changes to the evaluation criteria are that the severity rankings range from any harm being a 10 and no effect as a 1, the middle values are minor part replacements and system failure to meet the design specifications. The occurrence ranking table was changed to range only from 1 in 2 through 1 in 100,000. The detection ranking table has a 10 as undetectable problems and a 1 as non applicable detection. The split for the detection table between rankings 5 and above is the detection ability of a fully assembled system versus individual parts.
 
 === The Adhesive (Pot-Life)
@@ -38,7 +40,7 @@ Through testing we found that the roller negated the problem of the adhesive ski
   inset: 2.5pt,
   align: center,
   table.header(
-    [*Function*], [*Failure Mode*], [* Effects of Failure*], [*Severity Ranking*], [*Failure Cause*], [*Occurrence Ranking*], [*Control Method*], [*Detection Ranking*], [*RPN*], [A byproduct of production rate], [Too slow of a cycle time], [Smaller batches/inability to meet desired output], [7], [Too slow of a production speed], [9], [Tests for cycle time (how long it takes for one jig to be glued)], [5], [350])
+    [*Function*], [*Failure Mode*], [* Effects of Failure*], [*Severity Ranking*], [*Failure Cause*], [*Occurrence Ranking*], [*Control Method*], [*Detection Ranking*], [*RPN*], [A byproduct of production rate], [Too slow of a cycle time], [Smaller batches/inability to meet desired output], [7], [Too slow of a production speed], [9], [Tests for cycle time (how long it takes for one jig to be glued)], [5], [315])
   )
 
 _Overview_\
@@ -80,11 +82,39 @@ _Observed Failure_\
 The observed failure during full system testing was that glue got on the stopping ridges of the MPHX jig. This is the same location at which we identified the highest risk for jig bonding. The glue on the edge however was not an issue due to the fact that the (PLA) jig was not compatible with the adhesive and PC lamina.
 
 _Design Modifications_\
-Modifications for the jig 
+Modifications for the jig were made and only included small basic testing adjustments such as insetting the shim stock into the plate jig and widening the channel slots for less friction and easier movement.
 
 _Conclusions_\
-In conclusion, the adhesive compatibility 
+In conclusion, the adhesive compatibility between the jig (PLA) and lamina (PC) made unwanted glue application (jig bonding) a non issue since it had no effect on the end product.
+
+=== Jig Alignment
+
+#table(
+  columns: (auto, auto, auto, auto, auto, auto, auto, auto, auto),
+  inset: 2.5pt,
+  align: center,
+  table.header(
+    [*Function*], [*Failure Mode*], [* Effects of Failure*], [*Severity Ranking*], [*Failure Cause*], [*Occurrence Ranking*], [*Control Method*], [*Detection Ranking*], [*RPN*], [Holds the jig as it slides over the roller], [Misalignment with feed on other side], [Jig gets blocked by feed ], [7], [Difficulty in aligning separate 80x20 pieces across large distance], [7], [Easily detected through basic testing], [3], [147])
+  )
+
+_Overview_\
+The MPHX jig's ability to reliably move through the feed and roller systems depends on the feed and jig's relative alignment. Once pushed through the roller, if the MPHX jig is misaligned, the system will catch preventing gluing and the system from progressing. The main risk is the jig being blocked by the feed bars when it slides through the roller.
+
+_Assumptions_\
+- Any protrusions along the MPHX jig's edge would catch on the feed
+- The MPHX jig must be linear on its edges else it increases the risks of catching and can cause system wear
+- The feed bars can be pulled out to be a funnel shape
+
+_Observed Failure_\
+The observed failure of the jig and feed alignment was that the MPHX jig had significant friction when being pushed through the roller.
+
+_Design Modifications_\
+Design modifications done to our design in order to account for the risk of catching are that we changed the side bracings material from 1/10" thick shim stock to 1/4" thick aluminum. The dimensions and positioning for the M3 button head screws were not changed only the material. Similarly the feed bars were bent outward at an angle to help funnel the jig without causing the jig to catch.
+
+_Conclusions_\
+The modifications made to both the feed and jig, prevented the jig alignment from being an issue in our systems design. By changing the jig's side bracing material and extending the feed support bars out a bit we were able to mitigate the risk of the jig catching successfully. This is reflected in the systems working ability and its operating smoothness. 
 
 //5.2) Appropriate analysis and presentation of DFMEA results and top risks identified, appropriate management of top risks /10.0
 //5.3) Well thought-out interpretation of result and discussion
 == Risk Mitigation Strategy //overall summary
+To reduce the risk within our glue dispensing system, we tested our top 3 critical components from the DFMEA. 

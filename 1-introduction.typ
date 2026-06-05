@@ -44,6 +44,10 @@ After loading, the motor is turned on via the switch on the electrical box. The 
 
 #figure(
   caption: [System Operation Workflow Diagram],
-  [#image("images/WorkflowDiagram.png")]) <flowchart>
+  image(
+    "images/WorkflowDiagram.png"
+  ),
+  
+) <flowchart>
 
   

@@ -5,6 +5,12 @@
 = Project Management Information
 #include "II-project-management.typ"
 
+#[
+  #set page(flipped: true)
+  = DMFEA Full Breakdown
+  #include "7.x-dmfea.typ"
+]
+
 = Calculations
 #include "III-calculations.typ"
 

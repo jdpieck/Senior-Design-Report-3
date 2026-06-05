@@ -1,9 +1,10 @@
 == Project Timeline 
-Due to the unconventional nature of our project, we had to conduct our design and predicted manufacturing processes with a similar level of unconventionality. @tasks shows the list of tasks for this project as identified at the time of this report being written, including those that have already been completed and those projected to take place next quarter. Now that we have a better understanding of the tasks for manufacturing, troubleshooting, and preparing for the Senior Design Showcase next quarter, our task list from Report 1 has been greatly expanded upon. Newly identified tasks include more detailed descriptions of what we need to manufacture for each subsystem (jig, feed, electrical, etc), and deadlines for materials to submit to the Senior Design Showcase organizers.
+// In 1-2 paragraphs, discuss how your project timelines changed over the course. Also discuss any lessons learned about managing an engineering deign project and a team of engineers. Finally discuss how your team remained flexible and adapted to manage any changes in sponsor requirements and the much larger changes in the course requirements
 
-Completed tasks have been indicated with a check mark at the end of each line. While the exact order of the Gantt Chart does not match this list, this is due to the presence of overlapping tasks and subtasks in the chart's structure. This is allowable, however, since the flexible nature of Gantt Charts allows for slight adjustments in task deadlines. This allows the list below to still reflect the subsequently presented Gantt Chart.
+Regular in-person group meetings and consistent communication kept our team organized and on schedule with the tasks to be completed over the course of the project. The in-person meetings facilitated the sharing of ideas and keeping each other accountable for our respective tasks. Additionally, the distinct requirements of each project report provided definite goals for us to work towards.
 
-#include "II.I-tasks.typ"
+Solid planning via the Gantt chart gave us a good framework to work on during the design phase, but limited access to materials and regular changes in sponsor requirements meant the manufacturing and testing phases proved more difficult. To compensate for this inconsistency, we continued to make progress by delegating tasks based on each others strengths and worked on them in parallel. This meant that when one part of the project encountered a setback, the others could continue to progress without issue. Whenever a setback occurred, we made sure to quickly and effectively work past it by maintaining open lines of communication with our sponsor. One of the biggest takeaways from this project has been learning to prevent rigidity when planning and working with the resources you have. Overall, this project emphasized our flexibility and collaborative skills in addition to strong technical and design skills.
+// The variety of skills brought by our group members from documentation to manufacturing was critical to the completion of our project. We also maximized efficiency by delegating tasks based on each others strengths and work on them in parallel. This allowed for easy pivoting in plans due to regular changes in sponsor requirements. One of the biggest takeaways from this project has been learning to prevent rigidity when planning since design requirements could change at any time. Overall, this project emphasized our flexibility and collaborative skills in addition to strong technical and design skills.
 
 #page(
   width: auto,
@@ -12,13 +13,5 @@ Completed tasks have been indicated with a check mark at the end of each line. W
   header: none,
   margin: 0pt,
 
-  image("images/GanttChart.pdf", width: 8.5in) 
+  image("images/Senior Design Gantt.pdf", width: 8.5in) 
 )
-
-== Critical Path
-It is important to understand the most important tasks for the upcoming quarter in order to ensure our project continues to make steady progress, especially since we intend to manufacture a working prototype to present to our client. The manufacturing critical path has been indicated with the red path on the section of the Gantt Chart shown in @crit-path below. Through this section of the chart, the critical path involves the acquiring of our ordered parts from the bill of materials, modifying the necessary parts, assembling those parts into their corresponding subsystems, then troubleshooting the final prototype once the subsystems are assembled. The process of 3D printing parts and assembling the electrical components aren't considered critical since they can happen at any point during the process of machining components.
-
-#figure(
-  image("images/CriticalPath.png"),
-caption: [Manufacturing Critical Path Analysis]) 
-<crit-path>

@@ -1,11 +1,11 @@
 #let risk-table(
-  num-entries: 99,
+  num-entries: 31,
 ) = {
   let data = csv(
     "../reference/DMFEA.tsv",
     delimiter: "\t",
   )
-  highlight[I'm working on the table don't worry about it]
+  // highlight[I'm working on the table don't worry about it]
   set text(
     .2em
   )
