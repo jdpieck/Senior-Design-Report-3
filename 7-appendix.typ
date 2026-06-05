@@ -1,3 +1,5 @@
+#import "src/risk-tables.typ": *
+
 = Manufacturing / Production Information
 #include "I.I-manufacuring.typ"
 #pagebreak()
@@ -9,9 +11,12 @@
 #[
   #set page(flipped: true)
   = DMFEA Full Breakdown <full-dmfea>
-  #import "src/risk-tables.typ": *
   #risk-table()
 ]
+== Ranking Criteria
+#ranking-criteria("severity")
+#ranking-criteria("occurance")
+#ranking-criteria("detection")
 
 = Calculations
 #include "III-calculations.typ"

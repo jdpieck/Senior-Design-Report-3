@@ -52,12 +52,14 @@
     "../reference/ranking-" + type + ".tsv",
     delimiter: "\t",
   )
-
+  let name = upper(type.slice(0, 1)) + type.slice(1)
+  show: standard-table
+  show table.cell.where(y: 1): strong
   [
   #figure(
     table(
       columns: data.first().len(),
-      table.cell(colspan: 3)[#type Ranking Criteria],
+      table.cell(colspan: data.first().len())[#name Ranking Criteria],
       ..data.flatten()
     ),
   ) #label("ranking-criteria:" + type)

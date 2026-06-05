@@ -11,7 +11,8 @@ The full DFMEA with specified evaluation criteria can be seen in @full-dmfea. Th
 #figure(
   image(
     "DFMEA Flow Chart.pdf"
-  )
+  ),
+  caption: [DMFEA Flow Chart]
 )
 
 === The Adhesive (Pot-Life)
