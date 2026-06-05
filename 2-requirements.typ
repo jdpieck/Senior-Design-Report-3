@@ -18,6 +18,7 @@ In the following sections, a matching number indicates that a requirement was ro
 === Adhesive Selection
 1. Adhesive must be capable of sustaining 10 psi of internal pressure.
 2. Adhesive must have a cure time of less than 24 hours, preferably within 1 hour.
+3. Adhesive must be compatible with both ABS and polycarbonate.
 
 === Jig
 1. Jig must withstand and transmit a compressive force of 6 lb.

@@ -1,0 +1,24 @@
+Part	Manufacturing Process
+Top Plate	3D-printed using PETG
+Top Roller	3D-printed using PETG
+Top Roller Axle	Shaft stock was cut to the required dimensions and the ends were ground to remove burrs and provide a smooth finish.
+Spacer	3D-printed using PETG
+Pan Cover	Notch cut for axle 
+Motor Mount Spacer	3D-printed using PETG
+Roller Pan	Outsourced CNC machining. The adhesive vat was manufactured by Protolabs using a 5-axis milling process due to the complexity of the geometry.
+Base Plate	Drilling and tapping operations on aluminum bar stock. Hole locations were marked using layout dye and a granite surface plate, followed by drilling on a mill and tapping threaded holes with the aid of a tap guide to ensure alignment and thread quality.
+Bearing Block	Machining from 1/2 in thick × 1 in wide Teflon stock. The stock was rough cut to length on a table saw, finish milled to final dimensions, and drilled on a mill to produce clearance holes and the size "O" axle hole.
+Roller	Manual lathe machining from 1.5 in aluminum stock. Operations included center drilling, drilling and boring the axle hole to a size "O" clearance diameter, knurling the outer surface, turning stepped features using facing and parting tools, and drilling and tapping set screw holes on a mill
+Roller Axle	Shaft stock was cut to the required dimensions and the ends were ground to remove burrs and provide a smooth finish.
+Squeegee	The squeegee stock was cut to size using milling operations, and the clearance mounting holes were subsequently drilled on the mill to the dimensions specified.
+MPHX Jig Half 1	3D printed using PETG. Two halves connected via dovetail cutouts and secured with shim stock screwed into the sides using button-head screws (see Jig Side Bracing)
+MPHX Jig Half 2	3D printed using PETG. Two halves connected via dovetail cutouts and secured with shim stock screwed into the sides using button-head screws (see Jig Side Bracing)
+Lamina Jig 1	3D printed using PETG. Two halves connected via dovetail cutouts and secured with shim stock screwed into the sides using button-head screws (see Jig Side Bracing)
+Lamina Jig 2	3D printed using PETG. Two halves connected via dovetail cutouts and secured with shim stock screwed into the sides using button-head screws (see Jig Side Bracing)
+Jig Side Overhang	Shim stock was cut to the desired lengths using a shim stock shear and deburred
+Jig Center Overhang	Shim stock was cut to the desired lengths using a shim stock shear and deburred
+Jig Side Bracing	Aluminum stock was water jetted to the desired dimensions and then drilled on a drill press to counter sink holes
+Feed Plate	Aluminum stock cut to length using bandsaw. All holes drilled on drill press after scribing and punching hole locations. Countersunk holes on drill press. Bar bent slightly using vice and pliers.
+Underpinning Bar	Four holes for feet drilled on drill press first using a centering drill, and then all the way through with the proper cleanance bit
+Misc 20x20 Bars	Already cut to length by McMaster-Carr
+Modified Electrical Box	Holes for switch, speed control knob, and plugs were cut out out of existing box using a punch. Holes were dilled on the bottom for the screws that secure the AC/DC power converter and speed controller. External components (switch, speed control knob, plugs) were then glued into place and other components were screwed in

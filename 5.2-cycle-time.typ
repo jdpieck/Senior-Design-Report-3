@@ -42,7 +42,7 @@ In addition to impractical time requirements for repeated full-scale testing, th
 // This also leaves more adhesive to be used in other testing procedures.
 
 === Safety Considerations
-In order to safely conduct this test, the operator must wear PPE in the form of splash-resistant goggles, a wel-fitting respirator, nitrile gloves, and a fire-proof lab coat. In addition, the device itself must be operated in a fume hood to prevent fume exposure.
+In order to safely conduct this test, the operator must wear personal protective equipment (PPE) in the form of splash-resistant goggles, a well-fitting respirator, nitrile gloves, and a fire-proof lab coat. In addition, the device itself must be operated in a fume hood to prevent fume exposure.
 
 To clean up after the test, acetone is required to clean the roller and vat components, as well as rags to clean any other surfaces on which adhesive may have dripped during the manufacturing process. 
 

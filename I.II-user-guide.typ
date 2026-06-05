@@ -1,5 +1,4 @@
-
-== How To Use
+== How To Use (User Manual)
 
 The following is a comprehensive guide on how to properly set up, use, and clean Glue Dispensing Jig for Novel Polymer Heat Exchanger. 
 
@@ -42,7 +41,7 @@ The following is a comprehensive guide on how to properly set up, use, and clean
 + To clean off the edge of the vat, put a few drops of solvent on a disposable rag and wipe the edge where a skin has formed. This skin should not impact manufacturing overall.
 // Add image of cleaning the edge of the vat
 
-== Proper Cleaning Procedures
+=== Proper Cleaning Procedures
 + Upon completion of the desired number of MPHX plate modules, it’s important to clean the vat and roller components to prevent adhesive buildup over time.
 + Disconnect the roller from the motor housing and remove it from the vat. Unscrew the vat and scraper bar from the rest of the assembly.
 + Place vat and roller components in an acetone bath and allow them to sit until most of the adhesive has been dissolved.

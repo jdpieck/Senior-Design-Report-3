@@ -1,9 +1,4 @@
-== Design Function
-
-
-
-=== Master Assembly 
-
+== Design Function and Overview
 The glue application manufacturing process can be broken down into 3 mechanical subsystems: 
 
 - *Jig*
@@ -64,7 +59,7 @@ caption: [Latch mechanism],
 [#image("images/LatchDemo.png", width: 90%)]) <latch>
 
 #pagebreak()
-===== Top Rollers 
+==== Top Rollers 
 The top rollers (or pressure rollers) are a part of the roller super-structure assembly. They are constructed from a 3D-printed housing that contains a spring-loaded shaft. Bearings (1) mounted on the shaft provide contact with the jig as it passes over the adhesive rollers. Upon contact, the shaft (2) is free to translate upward within the housing. Spacers (4) are used to pre-load the springs (3), establishing the desired normal force applied to the jig. Further details on the force calculation are provided in @SpringLoad. A section view of the pressure roller assembly is shown in @PressureRollerSection to illustrate the spring mechanism.
 
 #figure(
@@ -83,8 +78,6 @@ As seen in @report1, our original design featured a roller submerged in a vat of
 #figure(
   caption: [Annotated adhesive roller system showing key components],
   [#image("images/AdhesiveRollerDia.png", width: 90%)]) <AdhesiveRollerDia> 
-
-
   
   
  Our design is composed of five main components. The first component is the tray, or adhesive vat. This part is a custom, outsourced component machined from aluminum. A metallic material is required due to continuous contact with adhesive and cleaning solvents. The system was designed with cleanability as a priority, given the relatively short pot life of the adhesive. The aluminum construction allows the vat to be easily cleaned by immersion in a solvent bath (acetone).
@@ -105,57 +98,6 @@ caption: [Motor CAD labeled with key components],
 [#image("images/MotorCAD.png", width: 90%)]) <MotorCAD>
 
 #pagebreak()
-==== Electrical Assembly <elec-assem>
-The electrical assembly provides power and speed control for the motor. The electrical assembly is composed of an electrical box (1), DC power supply (2), male power socket (3), and speed controller (4-6) as shown in @ann-elec-assem.
-
-#figure(
-  caption: [Annotated Electrical Box Assembly],
-  [#image("images/Annotated Elec Assem Drawing.png")]) <ann-elec-assem>
-
-  // #text(size: 1.0em, weight: "bold")[DC Power Supply and Speed Controller] 
-*DC Power Supply and Speed Controller*
-
-Since the system controlled by the electronics is a simple roller than only needs to be turned on and off, we found it unnecessary to create a complex circuit to power the entire jig. Instead, we settled on an off-the-shelf speed controller, DC power supply, and socket. These systems will be secured to the electrical box.
-
-For the system to operate as intended, wires will be soldered from the socket to the DC power supply and the dial and switch to the speed control board (not pictured). The speed controller will be directly powered by the DC power supply, meaning the power supply will be to the terminals on the speed controller board.
-
- // #text(size: 1.0em, weight: "bold")[ Electrical Box] 
-*Electrical Box*
- 
-The primary purpose of this box is to keep sensitive wiring safe from outside disturbances and keep all components contained to a single, organized space. The box also hides all elements unrelated to the direct operation and control of the roller, such as the switch and dial of the speed controller. Therefore, the electrical box is the structure that houses all previously discussed electronic elements. 
-
-To fit our purposes, the box will be modified from its original design (@ann-box-cutouts) by having holes drilled in the side and bottom to secure the DC power supply and speed controller, respectively (5,4). In addition, there will be appropriately sized slots cut into the top of the box for the socket (1), switch (3), and dial (2) to be inserted into and secured to.
-
-#figure(
-  caption: [Cutouts in Modified Electrical Box],
-  [#image("images/Annotated Box Cutouts.png", width: 80%)])
-  <ann-box-cutouts>
-
-The socket and DC power supply will be secured to the top and right sides of the electrical box, respectively, using two M3 screws each. The speed controller circuit board will be secured to the box using M3 screws through the bottom attachment holes. The speed controller dial and switch will be secured to their respective attachment slots using super glue since they do not come with their own built-in attachment points.
-
-
-
-#pagebreak()
-=== Feed <FeedSection>
-
-In Report 1, we opted for a locking-driven belt, which we have since forgone for the feed mechanism. Instead, we refined our design to prioritize simplicity, system reliability, and low cost. While we initially selected a locking mechanism in Report 1, we have since transitioned to a system of rollers made from bearings. This concept was considered in Report 1, but was not our final chosen design at the time.
-
-In the updated design, the jig slides along these rollers, allowing adhesive to be applied to the MPHX plate while it remains in the jig. This approach still effectively “locks” the plates in the required upside-down configuration, while enabling the user to simply place the jig on the rollers and push it forward until the system engages the plate and pulls it through. An initial sketch of this design can be found in @report1. In @feedCAD is a CAD model of the feed subsystem with the key components labeled. 
-
-#figure(
-  caption: [Annotated feed system showing key components],
-  [#image("images/FeedFeatures.png", width: 90%)])  <feedCAD>
-
-
-The feed is composed of a superstructure built from 80/20 aluminum extrusion (1,4,5,6), which is held together by standard brackets (2,3), allowing adjustability in the system. The entire roller system can slide vertically and horizontally, allowing the feed height distance from the adhesive roller to be adjusted after assembly. Two parallel plates (7) support roller bearings, which spin freely, allowing the jig to pass above and roll into the adhesive application roller without friction. The feeds before and after the roller are identical assemblies.
-
-Rubber feet on the bottom of the feed provide friction, preventing the system from slipping and keeping the system adequately level.
-
-
-
-
-
-#pagebreak()
 === Jig <jig>
 The jig assembly is composed of two subassembly jigs: the MPHX jig and the lamina jig. The jig assembly is vital to the project goal of bonding the glued plates with the lamina because it both holds the MPHX plates during the adhesive application process and aligns the lamina for proper bonding. The annotated jig assembly, as seen in @jig-annotated, features the MPHX jig after adhesive application, placed on top of the lamina jig, held together vertically by 4 M4 hex socket screws. 
 
@@ -171,11 +113,11 @@ The jig assembly is composed of two subassembly jigs: the MPHX jig and the lamin
 #pagebreak()
 ==== MPHX Jig <MPHX-jig>
 
-The MPHX jig is composed of two 3D printed PLA pieces, shim stock, M3 button head screws, and glue to secure the shim stock. @MPHXjigCAD shows the CAD model of the MPHX Jig subsystem, with key components labeled and numerically referenced. 
+The MPHX jig is composed of two 3D printed PLA pieces, shim stock, M3 button head screws, aluminum side rails, and glue to secure the shim stock. @MPHXjigCAD shows the CAD model of the MPHX Jig subsystem, with key components labeled and numerically referenced. 
 
 #figure(
   caption: [Annotated MPHX Jig showing key components],
-  [#image("images/MPHX Jig Diagram.jpeg", width: 90%)]) <MPHXjigCAD>
+  [#image("images/MPHX Jig Diagram.jpg", width: 90%)]) <MPHXjigCAD>
   
 // #figure(
 //   caption: [MPHX Jig Assembly Drawing],
@@ -185,7 +127,7 @@ The MPHX jig is composed of two 3D printed PLA pieces, shim stock, M3 button hea
 //   caption: [MPHX Jig Assembly Bill of Materials],
 //   [#image("images/PLATE JIG ASSEMBLY DRAWING BOM.png", width: 90%)])
 
-The MPHX jig's first main components are its 3D printed baseplates (2,3). The baseplates are 3D printed using PLA filament and feature a channel slot for the MPHX plates to sit in. They also include a stopping edge to ensure the MPHX plates are centered within the jig's baseplate. The baseplate is split into two halves, the first (2) has the stopping (closed) edge and the second is open allowing the MPHX plates to be slid in. The baseplates are connected by a dovetail pattern and reinforced using shim stock lining on either side which. They are then attached to the baseplate using M3 button head screws. The screws self-thread into the PLA and button heads were selected because of their low profile which would reduce the chances of the jig catching in the feed.
+The MPHX jig's first main components are its 3D printed baseplates (2,3). The baseplates are 3D printed using PLA filament and feature a channel slot for the MPHX plates to sit in. They also include a stopping edge to ensure the MPHX plates are centered within the jig's baseplate. The baseplate is split into two halves; the first (2) has the stopping (closed) edge, and the second is open, allowing the MPHX plates to be slid in. The baseplates are connected by a dovetail pattern and reinforced using aluminum rails lining either side. They are then attached to the baseplate using countersunk M3 button head screws. The screws self-thread into the PLA.
 
 Pieces of steel shim stock (4-6) are glued to the baseplate. They sit on top of the MPHX jig and are used to hang over and hold the railings on the MPHX plates. The shim stock holds the plates in the channel slots, allowing the MPHX jig to be flipped upside down for both the roller and lamina application processes. The baseplates have ridges outlining the locations of the shim stock, making it easier to align when gluing them in place.
 
@@ -210,7 +152,7 @@ The lamina jig is composed of 4 main components, as seen in @ann-lamina-jig: two
 
 #figure(
   caption: [Annotated Lamina Jig showing key components],
-  [#image("images/Lamina Jig Diagram.jpeg", width: 90%)])
+  [#image("images/Lamina Jig Diagram.jpg", width: 90%)])
   <ann-lamina-jig>
   
 // #figure(
@@ -218,9 +160,9 @@ The lamina jig is composed of 4 main components, as seen in @ann-lamina-jig: two
   // [#image("images/LAMINA JIG ASSEMBLY DRAWING.jpeg", width: 90%)]) <lam-jig>
 
   
-The two halves of the lamina jig (1) as seen in @ann-lamina-jig fit together using a dovetail pattern. This locks the parts together and forms a continuous and even surface for the lamina to sit on. The halves features extruded alignment pins to hold the lamina corners. These were designed to hold the lamina tightly, securing it to the jig. This ensures proper pin alignment when the MPHX jig is placed on top. An inner strip is extruded slightly below the corner alignment pins to ensure lamina and MPHX plate contact when pushed together. Each jig half also has 4 corner holes at the edges where M4 hex screws attach for the final lamina adhesion. These screws connect the MPHX and lamina jig subassemblies into the full jig seen in @jig.
+The two halves of the lamina jig (1) as seen in @ann-lamina-jig fit together using a dovetail pattern. This locks the parts together and forms a continuous and even surface for the lamina to sit on. The halves feature extruded alignment pins to hold the lamina corners. These were designed to hold the lamina tightly, securing it to the jig. This ensures proper pin alignment when the MPHX jig is placed on top. An inner strip is extruded slightly below the corner alignment pins to ensure lamina and MPHX plate contact when pushed together. Each jig half also has 4 corner holes at the edges where M4 hex screws attach for the final lamina adhesion. These screws connect the MPHX and lamina jig subassemblies into the full jig seen in @jig.
 
-The steel shim stock (2) is connected along the lamina jig sides with glue and M3 screws (3) to ensure a proper hold. Once connected the two halves of the lamina jig do not need to be separated and will form the fully connected lamina jig shown in @ann-lamina-jig.
+The aluminum bracing (2) is connected along the lamina jig sides with M3 screws (3) to ensure a proper hold. Once connected the two halves of the lamina jig do not need to be separated and will form the fully connected lamina jig shown in @ann-lamina-jig.
 
 #pagebreak()
 @LaminaFunction illustrates the placement of the lamina in the jig. 
@@ -234,6 +176,52 @@ The steel shim stock (2) is connected along the lamina jig sides with glue and M
 
 We opted for a system that facilitates easy manual assembly. Once the plate runs over the adhesive roller in its jig, the user picks it up the upside-down plate jig and places it onto the lamina jig. This jig is designed with *corner location features* so the user can easily and accurately align the lamina. Because the jig is slightly raised, when pressure is applied to the assembled stack, the raised portions press the lamina directly onto the ridges of the MPHX plate. Finally, a weight is placed on top of the assembly for the 15-minute fixture time @OateySpecialMedium to ensure a secure bond.
 
+// #pagebreak()
+#pagebreak()
+=== Feed <FeedSection>
+
+In Report 1, we opted for a locking-driven belt, which we have since forgone for the feed mechanism. Instead, we refined our design to prioritize simplicity, system reliability, and low cost. While we initially selected a locking mechanism in Report 1, we have since transitioned to a system of rollers made from bearings. This concept was considered in Report 1, but was not our final chosen design at the time.
+
+In the updated design, the jig slides along these rollers, allowing adhesive to be applied to the MPHX plate while it remains in the jig. This approach still effectively “locks” the plates in the required upside-down configuration, while enabling the user to simply place the jig on the rollers and push it forward until the system engages the plate and pulls it through. An initial sketch of this design can be found in @report1. In @feedCAD is a CAD model of the feed subsystem with the key components labeled. 
+
+#figure(
+  caption: [Annotated feed system showing key components],
+  [#image("images/FeedFeatures.png", width: 90%)])  <feedCAD>
+
+
+The feed is composed of a superstructure built from 80/20 aluminum extrusion (1,4,5,6), which is held together by standard brackets (2,3), allowing adjustability in the system. The entire roller system can slide vertically and horizontally, allowing the feed height distance from the adhesive roller to be adjusted after assembly. Two parallel plates (7) support roller bearings, which spin freely, allowing the jig to pass above and roll into the adhesive application roller without friction. The feeds before and after the roller are identical assemblies.
+
+Rubber feet on the bottom of the feed provide friction, preventing the system from slipping and keeping the system adequately level.
+
+
+#pagebreak()
+=== Electrical Assembly <elec-assem>
+The electrical assembly provides power and speed control for the motor. The electrical assembly is composed of an electrical box (1), DC power supply (2), male power socket (3), and speed controller (4-6) as shown in @ann-elec-assem.
+
+#figure(
+  caption: [Annotated Electrical Box Assembly],
+  [#image("images/Annotated Elec Assem Drawing.png")]) <ann-elec-assem>
+
+==== DC Power Supply and Speed Controller
+Since the system controlled by the electronics is a simple roller than only needs to be turned on and off, we found it unnecessary to create a complex circuit to power the entire jig. Instead, we settled on an off-the-shelf speed controller, DC power supply, and socket. These systems will be secured to the electrical box.
+
+For the system to operate as intended, wires will be soldered from the socket to the DC power supply and the dial and switch to the speed control board (not pictured). The speed controller will be directly powered by the DC power supply, meaning the power supply will be to the terminals on the speed controller board.
+
+==== Electrical Box 
+The primary purpose of this box is to keep sensitive wiring safe from outside disturbances and keep all components contained to a single, organized space. The box also hides all elements unrelated to the direct operation and control of the roller, such as the switch and dial of the speed controller. Therefore, the electrical box is the structure that houses all previously discussed electronic elements. 
+
+To fit our purposes, the box will be modified from its original design (@ann-box-cutouts) by having holes drilled in the side and bottom to secure the DC power supply and speed controller, respectively (5,4). In addition, there will be appropriately sized slots cut into the top of the box for the socket (1), switch (3), and dial (2) to be inserted into and secured to.
+
+#figure(
+  caption: [Cutouts in Modified Electrical Box],
+  [#image("images/Annotated Box Cutouts.png", width: 80%)])
+  <ann-box-cutouts>
+
+The socket and DC power supply will be secured to the top and right sides of the electrical box, respectively, using two M3 screws each. The speed controller circuit board will be secured to the box using M3 screws through the bottom attachment holes. The speed controller dial and switch will be secured to their respective attachment slots using super glue since they do not come with their own built-in attachment points.
+
+
+
+#pagebreak()
 == Requirements Met
 //how are the requirements met
 //needs to be written
@@ -252,6 +240,8 @@ Using this test our team was also able to verify that the selected adhesive can 
 
 === Requirement 2 (High Throughput)
 //insert cycle testing results 
+To make sure that our design meets the requirement of producing 1000 MPHX modules within an 8 hour work day, a cycle test (@cycle-test-procedure) was done on our completed system. The test told us that it takes 30 seconds for a jig (two plates) to get glued and therefore our desired 1000 plates within 8 hours can actually be achieved within 4 hours.
+
 === Requirement 3 (Long Life Cycle)
 To assess whether the system would meet its required lifecycle, the team performed stress and fatigue analyses on the components with the highest risk of failure, specifically the top roller springs and the roller axle. These calculations are presented in @springfatigue, @defofaxle, and @axlelife.
 
@@ -259,9 +249,12 @@ All results yielded large safety factors and indicate that the components are ex
 
 === Requirement 4 (Form Factor)
 Due to the harmful solvent in the adhesive, we are using our system must be used in a standard-sized fume hood. which has dimensions of 5' length $times$ 2' width $times$ 2.5' height. Our final system is 3.5' length $times$ 0.75' width $times$ 0.58' height, which can easily fit in the fume hood.
+
 === Requirement 5 (MPHX-Lamina Alignment)
 //Must align within 1.5 mm laterally and 3 mm longitudinally.
 //needs to be written 
+The MPHX plates and lamina must be glued within 1.5mm laterally and 3mm longitudinally of the edges in order to correctly seal the MPHX modules. By fixing both the position of the lamina in the lamina jig and stopping the MPHX plate in the plate jig we are able to position our components to achieve the desired accuracy for our MPHX jig and lamina. The two jigs hold the two pieces directly on top of each other when stacked so that the points of contact between them are centered and alignment pins (M4 screws) are used to make sure that the jigs don't shift during the bonding duration.
 
+#pagebreak()
 == Bill of Materials
 #include "3.2-bom.typ"

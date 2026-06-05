@@ -94,6 +94,8 @@
   show heading.where(level: 1): set text(fill: accent)
   show heading.where(level: 2): set text(fill: luma(20%))
   show heading.where(level: 3): set text(fill: accent.lighten(10%))
+  show heading.where(level: 4): set text(.85em, fill: luma(28%))
+  show heading.where(level: 4): set heading(outlined: false)
 
   set heading(numbering: "1.1)")
   
@@ -147,7 +149,7 @@
         set text(8pt, weight: 300)
         h(1fr)
         [#for a in authors [#a.name#if a != authors.last() [, ]] - ]
-        text(fill: accent, weight: "bold", counter(page).display("1"))
+        text(fill: accent, weight: "bold", counter(page).display("a"))
       }
     },
     header: context {
@@ -250,13 +252,22 @@
   outline(title: "Figures", target: figure.where(kind: image))
   outline(title: "Tables", target: figure.where(kind: table))
   
-  
-
-  heading(level: 1, numbering: none, [Key Terms], bookmarked: false)
+  pagebreak()
+  heading(level: 1, numbering: none, [Key Terms], outlined: false, )
   terms(..csv("../reference/def.csv").sorted(), separator: [ -- ])
 
-
   pagebreak()  
+  counter(page).update(1)
+   set page(
+      footer: context {
+        // if counter(page).get() > (1, ) {
+          set text(8pt, weight: 300)
+          h(1fr)
+          [#for a in authors [#a.name#if a != authors.last() [, ]]  - ]
+          text(fill: accent, weight: "bold", counter(page).display("1"))
+        // }
+     },
+    )
 
 
   {
@@ -272,6 +283,7 @@
   pagebreak()
   
   {
+    show heading: set text(1.2em)
     show bibliography: set text(.8em)
     // show bibliography: it => {
     //   text(.8em, it.title)
@@ -281,6 +293,7 @@
   }
 
   {
+    show heading: set text(1.2em)
     pagebreak(weak: true)
     show: appendix
     include "../7-appendix.typ" 

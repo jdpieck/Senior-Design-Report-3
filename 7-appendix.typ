@@ -1,5 +1,6 @@
 = Manufacturing / Production Information
 #include "I.I-manufacuring.typ"
+#pagebreak()
 #include "I.II-user-guide.typ"
 
 = Project Management Information
