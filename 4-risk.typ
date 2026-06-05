@@ -6,7 +6,13 @@ To determine the most failure prone components of our design and to help mitigat
 #risk-table(num-entries: 4)
 
 
-The full DFMEA with specified evaluation criteria can be seen in (appendix). The notable changes to the evaluation criteria are that the severity rankings range from any harm being a 10 and no effect as a 1, the middle values are minor part replacements and system failure to meet the design specifications. The occurrence ranking table was changed to range only from 1 in 2 through 1 in 100,000. The detection ranking table has a 10 as undetectable problems and a 1 as non applicable detection. The split for the detection table between rankings 5 and above is the detection ability of a fully assembled system versus individual parts.
+The full DFMEA with specified evaluation criteria can be seen in @full-dmfea. The notable changes to the evaluation criteria are that the severity rankings range from any harm being a 10 and no effect as a 1, the middle values are minor part replacements and system failure to meet the design specifications. The occurrence ranking table was changed to range only from 1 in 2 through 1 in 100,000. The detection ranking table has a 10 as undetectable problems and a 1 as non applicable detection. The split for the detection table between rankings 5 and above is the detection ability of a fully assembled system versus individual parts.
+
+#figure(
+  image(
+    "DFMEA Flow Chart.pdf"
+  )
+)
 
 === The Adhesive (Pot-Life)
 // #table(

@@ -18,3 +18,13 @@ selected:
   - title: Roller Bearing Feed
     path: "roller-feed-design.png" 
     description: This feed mechanism uses powered rollers to move a tray of MPHX plates along a track. The rollers could span the length of the tray or be cantilevered as pictured. 
+
+jig: 
+  - title: Vacuum Chuck 
+    path: "Vacuum_Leah.png" 
+    description: The vacuum chuck holds the workpiece flat against the locating features. A vacuum pump is attached to the chuck inlet and creates a vacuum through channels in the chuck, which suck the workpiece against the face. 
+
+  - title: Stretch Mechanism
+    path: "Stretch Mechanism.jpg"
+    description: This jig design puts the plate under tension by placing two pillars within the water flow channels of the MPHX, and moving them apart from each other. While there is risk of damaging the plates, adding a slight force away using a ball-screw-like mechanism would prevent the plate from moving while remaining completely flush.
+    

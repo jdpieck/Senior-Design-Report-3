@@ -30,4 +30,8 @@
   )
 }
 
+
+== Selected Designs from Report 1 <report1>
 #solution-grid(yaml("reference/designs.yaml").selected)
+== Alternative Jig Designs from Report 1 <alt-jig>
+#solution-grid(yaml("reference/designs.yaml").jig)

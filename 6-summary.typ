@@ -12,7 +12,9 @@ Another major issue identified was the consistency of adhesive application. As w
 
 == Future Work
 
-Future testing and improvements will require the MPHX injection-molding process to be fully stabilized, including selecting a final material, addressing flashing on the plates, and ensuring proper flatness. This will help prevent last-minute design changes such as those discussed in the previous section.
+Future testing and improvements will require the MPHX injection-molding process to be more stabilized, including selecting a final material, addressing flashing on the plates. This will help prevent last-minute design changes such as those discussed in the previous section.
+
+Seeing as plate warping is a manufacturing defect inherit to the injection molding process, the jig will need to be updated to be hold the plates completely flat. We recommend perusing some of our previously evaluated designs from Report 1 as seen in @alt-jig.  
 
 Assuming the current design is still active, future teams should consider pairing the PC MPHX plates with an ABS film, since the adhesive we selected was optimized for PC-ABS bonding. This film should preferably be 400 microns thick and flat; any bowing will cause alignment issues. A successfully glued MPHX plate can then be pressure-tested to verify it has specific adhesion.
 

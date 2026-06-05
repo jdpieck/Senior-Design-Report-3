@@ -8,15 +8,13 @@
 
 #[
   #set page(flipped: true)
-  = DMFEA Full Breakdown
-  #include "7.x-dmfea.typ"
+  = DMFEA Full Breakdown <full-dmfea>
+  #import "src/risk-tables.typ": *
+  #risk-table()
 ]
 
 = Calculations
 #include "III-calculations.typ"
-
-= Selected Designs from Report 1 <report1>
-#include "IV-old-designs.typ"
 
 = MATLAB Simulations
 == MATLAB Code For Spring Fatigue <appx-spring>
@@ -34,5 +32,9 @@
   ],
   caption: [Simulation of Deformation using Onshape simulation tools. ]
 )
+= Design Sketches
+#include "IV-old-designs.typ"
+
+
 
 #include "src/drawings.typ"
