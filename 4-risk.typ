@@ -112,13 +112,13 @@ The MPHX jig's ability to reliably move through the feed and roller systems depe
 - The feed bars can be pulled out to be a funnel shape
 
 ==== Observed Failure
-The observed failure of the jig and feed alignment was that the MPHX jig had significant friction when being pushed through the roller.
+Through testing, we observed that the jig would catch at the transition point from the rollers to the second half of the feed. This was due to both the M3 button-head screws protruding from the sides and slight misalignments of the jig after passing through the rollers.
 
 ==== Design Modifications
-Design modifications done to our design in order to account for the risk of catching are that we changed the side bracings material from 1/10" thick shim stock to 1/4" thick aluminum. The dimensions and positioning for the M3 button head screws were not changed only the material. Similarly the feed bars were bent outward at an angle to help funnel the jig without causing the jig to catch.
+Design modifications done to our design in order to account for the risk of catching are that we changed the side bracings' material from 1/10" thick shim stock to 1/4" thick aluminum. This aluminum includes countersunk holes, preventing the M3 screw heads from protruding. As an additional measure, we bent the feed rails at a mild angle at the transition points to the roller.
 
 ==== Conclusions
-The modifications made to both the feed and jig, prevented the jig alignment from being an issue in our systems design. By changing the jig's side bracing material and extending the feed support bars out a bit we were able to mitigate the risk of the jig catching successfully. This is reflected in the systems working ability and its operating smoothness. 
+These modifications have since prevented any issues with the jig catching along the system, and as such, we made the decision that additional testing was not required for this failure mode.
 
 //5.2) Appropriate analysis and presentation of DFMEA results and top risks identified, appropriate management of top risks /10.0
 //5.3) Well thought-out interpretation of result and discussion
