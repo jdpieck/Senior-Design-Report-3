@@ -8,9 +8,11 @@ As discussed earlier, our design makes extensive use of pre-fabricated component
     row-type: dictionary
   )
 
+  
+
   show table: set align(left)
   show figure: set block(breakable: true)
-  show table: set text(.94em)
+  show table: set text(.9em)
   let better-ref(label) = ref(label)
   
   import "src/template.typ": *

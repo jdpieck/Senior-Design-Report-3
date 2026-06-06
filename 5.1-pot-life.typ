@@ -49,6 +49,7 @@ For Experiment 3, we will measure the pot life of the adhesive after it has been
 For Experiment 1, we were unable to accurately determine the adhesive evaporation rate. The highly sensitive scale could not obtain stable measurements due to the constant airflow in the fume hood. In addition, we observed that the adhesive formed a skin over the surface of the vat, which protected the adhesive underneath from evaporation. Disturbing this skin through mixing significantly increased the pot life.
 
 For Experiment 2, we recorded the following pot life times. 
+For Experiment 3, we found that the pot could be successfully revived any amount of solvent.
 
 #figure(
   table(
@@ -70,7 +71,6 @@ For Experiment 2, we recorded the following pot life times.
 caption: [Adhesive Dilution Testing Results]
 )
 
-For Experiment 3, we found that the pot could be successfully revived any amount of solvent .
 
 
 

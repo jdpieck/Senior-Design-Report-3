@@ -26,39 +26,37 @@
   columns: 2,
   table.header([Winter Quarter], [Spring Quarter]),
   [
-    + Team Formation/Role Assignment & Project Assignment  (#sym.checkmark)
-    + Contact Sponsor and Prepare Questions for First Meeting (#sym.checkmark)
-    + Memo Report 1 Due (#sym.checkmark)
-    + First Sponsor Meeting (#sym.checkmark)
-    + Post-Sponsor Meeting Debrief (#sym.checkmark)
-    + Develop Preliminary System Requirements (#sym.checkmark)
-    + Develop Design Evaluation Criteria For Scoring Matrix (#sym.checkmark)
-    + Memo Report 2 Due (#sym.checkmark)
-    + Second Sponsor Meeting (#sym.checkmark)
-    + Begin Research on Different Adhesive Options (#sym.checkmark)
-    + Third Sponsor Meeting (#sym.checkmark)
-    + Begin Subsystem Design (#sym.checkmark)
-    + Begin Design Sketches (#sym.checkmark)
-    + Preliminary Gantt Chart (#sym.checkmark)
-    + Identify Which Adhesives Work With Available Materials (#sym.checkmark)
-    + Select Final Design Candidates (#sym.checkmark)
-    + Preliminary Feasibility Calculations (#sym.checkmark)
-    + Fourth Sponsor Meeting (#sym.checkmark)
-    + Preliminary Design Report (#sym.checkmark)
-    + Pressure Test Selected Adhesives (#sym.checkmark)
-    + Fifth Sponsor Meeting (#sym.checkmark)
-    + Critical Analysis of Adhesive Types (#sym.checkmark)
-    + Memo Report 4 Due (#sym.checkmark)
-    + Finalize Prototype Design (#sym.checkmark)
-    + Basic CAD Models in Onshape (#sym.checkmark)
-    + Revise CAD Models (#sym.checkmark)
-    + Create Master Assembly of CAD Models (#sym.checkmark)
-    + FEM Analysis (#sym.checkmark)
-    + Finalize Calculations (#sym.checkmark)
-    + Finalize Bill of Materials (#sym.checkmark)
-    + Submit BOM and Engineering Drawing Package (#sym.checkmark)
-    + Submit Machine Architecture Report (#sym.checkmark)
-    + Purchase Supplies for Prototype Manufacturing (#sym.checkmark)
+    + Team Formation/Role Assignment & Project Assignment   
+    + First Sponsor Contact  
+    + Memo Report 1 Due  
+    + First Sponsor Meeting  
+    + Develop Preliminary System Requirements  
+    + Develop Design Evaluation Criteria For Scoring Matrix  
+    + Memo Report 2 Due  
+    + Second Sponsor Meeting  
+    + Begin Adhesive Option Research  
+    + Third Sponsor Meeting  
+    + Begin Subsystem Design Sketches  
+    + Preliminary Gantt Chart  
+    + Identify Which Adhesives Work With Available Materials  
+    + Select Final Design Candidates  
+    + Preliminary Feasibility Calculations 
+    + Fourth Sponsor Meeting  
+    + Preliminary Design Report  
+    + Pressure Test Selected Adhesives  
+    + Fifth Sponsor Meeting  
+    + Critical Analysis of Adhesive Types  
+    + Memo Report 4 Due
+    + Finalize Prototype Design
+    + Basic CAD Models in Onshape
+    + Revise CAD Models
+    + Create Master Assembly of CAD Models
+    + FEM Analysis
+    + Finalize Calculations 
+    + Finalize Bill of Materials 
+    + Submit BOM and Engineering Drawing Package
+    + Submit Machine Architecture Report 
+    + Purchase Supplies for Prototype Manufacturing
   ],
   [
     + Obtain Bill of Materials Order
@@ -66,12 +64,19 @@
     + 3D Print Parts
     + Solder Electrical Components
     + Assemble Electrical Systems
+    + Seventh Sponsor Meeting
     + Machine + Modify Ordered Parts
     + Seventh Sponsor Meeting
     + Assemble Subsystem Components
+    + Eighth Sponsor Meeting
+    + Ninth Sponsor Meeting
     + Finish Final Physical Prototype
+    + Tenth Sponsor Meeting
+    + Eleventh Sponsor Meeting
     + Test and Troubleshoot Final Prototype
+    + Twelfth Sponsor Meeting
     + Draft of Poster Design
+    + Final Sponsor Meeting
     + Submit Project Abstract for Senior Design Showcase
     + Prepare for Team Critical Design Reviews
     + Final Poster PowerPoint
@@ -80,5 +85,5 @@
     + Capstone Poster and Design Showcase
   ]
 ),
-caption: [Tasks for the next two quarters]
+caption: [Final Completed Task List]
 ) <tasks>

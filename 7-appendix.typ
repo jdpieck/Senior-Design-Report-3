@@ -7,6 +7,7 @@
 
 = Project Management Information
 #include "II-project-management.typ"
+#pagebreak()
 
 #[
   #set page(flipped: true)

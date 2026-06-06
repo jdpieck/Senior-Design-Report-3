@@ -1,8 +1,9 @@
 MPHX,"Microchannel Polymer Heat Exchanger"
 PC,polycarbonate
 ABS,Acrylonitrile Butadiene Styrene
-Lamina,applied polycarbonate film
-MPHX Plate,Injection Molded ABS Plate
+Lamina, thin flat sheet of ABS (formerly PC)
+MPHX Plate,Injection Molded PC (formerly ABS) Plate with water and air channels
+MPHX Module,MPHX Plate bonded to Lamina film
 PLA, polylactic acid
 MEK, Methyl Ethyl Ketone
 PETG, Polyethylene Terephthalate Glycol

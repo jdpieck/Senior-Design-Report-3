@@ -16,7 +16,7 @@ Some of these overarching subsystems can be broken down into further subassembli
  @MasterAssembly is the CAD model of our completed design. It features all subsystems of our finalized jig design. 
 #figure(
   caption: [Master Assembly Isometric View],
-  [#image("images/MasterAssembly.png", width: 90%)]) <MasterAssembly> 
+  [#image("images/MasterAssembly.png", width: 80%)]) <MasterAssembly> 
 
 
 The MPHX-loaded jig moves through the system as shown in @JigPath.
@@ -43,14 +43,13 @@ Figure @rollerassy shows the complete roller subsystem, which includes the rolle
 caption: [Roller super-structure CAD labeled with key components],
 [#image("images/RollerAssy.png", width: 90%)]) <rollerassy>
 
-#pagebreak()
 ==== Roller Super-Structure 
 
 The pressure roller is a subassembly of the roller system. The two feed assemblies are joined together by the pressure roller assembly as seen in @MasterAssembly. This assembly consists of 80/20 aluminum extrusion, a base plate (4) that connects the roller assembly to the feed assemblies, a latch mechanism (2,3), and the pressure rollers (1). @super-structure shows a labeled and numbered CAD model of the system.
 
 #figure(
 caption: [Roller super-structure CAD labeled with key components],
-[#image("images/Super-Structure.png", width: 90%)]) <super-structure>
+[#image("images/Super-Structure.png", width: 80%)]) <super-structure>
 
 The latch and hinge mechanism, shown in @latch, provides easy access to the adhesive pan for cleaning and allows the pan to be covered between uses to prevent adhesive drying.
 
@@ -58,7 +57,6 @@ The latch and hinge mechanism, shown in @latch, provides easy access to the adhe
 caption: [Latch mechanism],
 [#image("images/LatchDemo.png", width: 90%)]) <latch>
 
-#pagebreak()
 ==== Top Rollers 
 The top rollers (or pressure rollers) are a part of the roller super-structure assembly. They are constructed from a 3D-printed housing that contains a spring-loaded shaft. Bearings (1) mounted on the shaft provide contact with the jig as it passes over the adhesive rollers. Upon contact, the shaft (2) is free to translate upward within the housing. Spacers (4) are used to pre-load the springs (3), establishing the desired normal force applied to the jig. Further details on the force calculation are provided in @SpringLoad. A section view of the pressure roller assembly is shown in @PressureRollerSection to illustrate the spring mechanism.
 
@@ -143,10 +141,9 @@ The plates are inserted into the jig by sliding them underneath the shim stock r
 
 
 
-#pagebreak()
 ==== Lamina Jig <lamina-jig>
 
-After receiving film samples from our sponsor, we discovered that each precut film is covered by a protective layer that must be peeled off by hand. Since this is a necessary manual step, we determined that a manual application process would be simpler and more efficient than an automated one. Even an automated system would still require the user to peel the film before inserting it, making automation unnecessary complexity. This led us to develop the lamina jig.
+After receiving film samples from our sponsor, we discovered that each precut film is covered by a protective layer that must be peeled off by hand (this was an issue for the former material PC). Since this is a necessary manual step, we determined that a manual application process would be simpler and more efficient than an automated one. Even an automated system would still require the user to peel the film before inserting it, making automation unnecessary complexity. This led us to develop the lamina jig.
 
 The lamina jig is composed of 4 main components, as seen in @ann-lamina-jig: two halves of 3D printed PLA, M3 button head screws, and steel shim stock.
 
@@ -176,8 +173,8 @@ The aluminum bracing (2) is connected along the lamina jig sides with M3 screws 
 
 We opted for a system that facilitates easy manual assembly. Once the plate runs over the adhesive roller in its jig, the user picks it up the upside-down plate jig and places it onto the lamina jig. This jig is designed with *corner location features* so the user can easily and accurately align the lamina. Because the jig is slightly raised, when pressure is applied to the assembled stack, the raised portions press the lamina directly onto the ridges of the MPHX plate. Finally, a weight is placed on top of the assembly for the 15-minute fixture time @OateySpecialMedium to ensure a secure bond.
 
-// #pagebreak()
-#pagebreak()
+
+
 === Feed <FeedSection>
 
 In Report 1, we opted for a locking-driven belt, which we have since forgone for the feed mechanism. Instead, we refined our design to prioritize simplicity, system reliability, and low cost. While we initially selected a locking mechanism in Report 1, we have since transitioned to a system of rollers made from bearings. This concept was considered in Report 1, but was not our final chosen design at the time.
@@ -228,7 +225,7 @@ The socket and DC power supply will be secured to the top and right sides of the
 For reference throughout this section, our system design requirements can be found in @quantrequirements.
 
 === Requirement 1 (Adhesive Strength)
-To determine if our adhesive would hold for the required pressure, our team performed pressure tests on bonded samples (ABS pipe bonded to PC film). Our experimental setup can be found in @experimentalsetup. Three specimens were pressurized to 50 psig in 5 psi increments. At each increment, the pressure was held for 5 minutes. No samples exhibited failure or leakage throughout the testing.
+To determine if our adhesive would hold for the required pressure, our team performed pressure tests on bonded samples (ABS pipe bonded to PC film, consistent with the initial materials used in the project). Our experimental setup can be found in @experimentalsetup. Three specimens were pressurized to 50 psig in 5 psi increments. At each increment, the pressure was held for 5 minutes. No samples exhibited failure or leakage throughout the testing.
 
 
 
@@ -238,6 +235,7 @@ To determine if our adhesive would hold for the required pressure, our team perf
   
 Using this test our team was also able to verify that the selected adhesive can withstand the required 10 psig for successful operation of the heat exchanger. Because the system will operate with water flowing through it, compatibility with water was also evaluated. The selected adhesive is designed for plumbing applications, confirming its suitability for this use case.
 
+#pagebreak()
 === Requirement 2 (High Throughput)
 //insert cycle testing results 
 To make sure that our design meets the requirement of producing 1000 MPHX modules within an 8 hour work day, a cycle test (@cycle-test-procedure) was done on our completed system. The test told us that it takes 30 seconds for a jig (two plates) to get glued and therefore our desired 1000 plates within 8 hours can actually be achieved within 4 hours.
@@ -255,6 +253,6 @@ Due to the harmful solvent in the adhesive, we are using our system must be used
 //needs to be written 
 The MPHX plates and lamina must be glued within 1.5mm laterally and 3mm longitudinally of the edges in order to correctly seal the MPHX modules. By fixing both the position of the lamina in the lamina jig and stopping the MPHX plate in the plate jig we are able to position our components to achieve the desired accuracy for our MPHX jig and lamina. The two jigs hold the two pieces directly on top of each other when stacked so that the points of contact between them are centered and alignment pins (M4 screws) are used to make sure that the jigs don't shift during the bonding duration.
 
-#pagebreak()
+
 == Bill of Materials
 #include "3.2-bom.typ"

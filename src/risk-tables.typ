@@ -18,14 +18,16 @@
 
   show table.cell.where(x: 9): strong
   show table.cell.where(y: 0): set align(bottom)
-  // show table.cell.where(x: 8, y: 0): it => rotate(-90deg, it)
-  // show table.cell.where(x: 6, y: 0): it => rotate(-90deg, it)
-  // show table.cell.where(x: 4, y: 0): it => rotate(-90deg, it)
+  show table.cell.where(x: 8, y: 0): it => rotate(-90deg, it)
+  show table.cell.where(x: 6, y: 0): it => rotate(-90deg, it)
+  show table.cell.where(x: 4, y: 0): it => rotate(-90deg, it)
+  // show table.cell.where(y: 0): it => rotate(-90deg, it)
 
   [
   #figure(
     table(
       // columns: (1fr, 1fr, 1fr, 1fr, 5em, 1fr, 5em, 1fr, 5em, 5em, 1fr),
+      // rows: (.75in, ..(auto, )*(num-entries - 1 )),
       columns: data.first().len(),
       // table.header(
       //   ..data.slice(0, 1).flatten().map(it => 

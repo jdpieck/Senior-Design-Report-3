@@ -75,7 +75,7 @@
   set text(
     font: "IBM Plex Sans", 
     lang: "en",
-    size: 11pt,
+    size: 12pt,
   )
   
   show math.equation: set text(font: "IBM Plex Math", size: 11pt)
@@ -137,7 +137,7 @@
     numbering: "1", 
     number-align: right, 
     margin: (
-      rest: .75in,
+      rest: 1in,
       // bottom: .875in,
       // rest: .625in
     ), 
@@ -149,7 +149,7 @@
         set text(8pt, weight: 300)
         h(1fr)
         [#for a in authors [#a.name#if a != authors.last() [, ]] - ]
-        text(fill: accent, weight: "bold", counter(page).display("a"))
+        text(fill: accent, weight: "bold", counter(page).display("i"))
       }
     },
     header: context {
@@ -221,15 +221,23 @@
     )
   }
   )
+
   pagebreak()
+  {
+    // set page()
+  heading([Abstract], numbering: none, outlined: false)
+  include "../0-abstract.typ"
+    
+  }
 
-
+  
   let fancy-outline(body) = {
     show outline.entry.where(level: 1): set block(above: 1.2em)
     show outline.entry.where(level: 1): strong
     body
   }
   
+  pagebreak()
   {
     show: fancy-outline
     outline(
@@ -250,9 +258,11 @@
   pagebreak(weak: false)
   
   outline(title: "Figures", target: figure.where(kind: image))
-  outline(title: "Tables", target: figure.where(kind: table))
+  // v(-.3em)
   
   pagebreak()
+  outline(title: "Tables", target: figure.where(kind: table))
+  
   heading(level: 1, numbering: none, [Key Terms], outlined: false, )
   terms(..csv("../reference/def.csv").sorted(), separator: [ -- ])
 
