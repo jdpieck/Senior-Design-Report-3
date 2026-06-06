@@ -10,7 +10,7 @@
     // #place(top, float: true)[
       = CAD Drawings <CAD-Drawings>
     // ]  
-    #set text(.85em)
+    // #set text(.85em)
     #v(.65em)
     #outline(
       // title: "CAD Drawings",

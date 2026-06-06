@@ -7,7 +7,7 @@
 
 = Project Management Information
 #include "II-project-management.typ"
-#pagebreak()
+// #pagebreak()
 
 #[
   #set page(flipped: true)
@@ -15,8 +15,11 @@
   #risk-table()
 ]
 == Ranking Criteria
+=== Severity Ranking Criteria
 #ranking-criteria("severity")
-#ranking-criteria("occurance")
+=== Occurrence Ranking Criteria
+#ranking-criteria("occurrence")
+=== Detection Ranking Criteria
 #ranking-criteria("detection")
 
 = Calculations

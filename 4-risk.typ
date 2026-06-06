@@ -9,16 +9,19 @@ To determine the most failure-prone components of our design and to help mitigat
 The full DFMEA with specified evaluation criteria can be seen in @full-dmfea. The notable changes to the evaluation criteria are that the severity rankings range from any harm being a 10 and no effect as a 1, the middle values are minor part replacements and system failure to meet the design specifications. The occurrence ranking table was changed to range only from 1 in 2 through 1 in 100,000. The detection ranking table has a 10 as an undetectable problem and a 1 as a non-applicable detection. The split for the detection table between rankings 5 and above is the detection ability of a fully assembled system versus individual parts.
 
 To outline all the different interactions between each of the subsystems, we created a DMFEA Flow Chart (@sys-flow-chart)
-#v(-1em)
 #figure(
   block(
     // height: 3in,
     // width: 100%,
     clip: true,
+    {
+  v(-4em)
   image(
     "DFMEA Flow Chart.pdf",
     width: 100%
   )
+      
+    }
   ),
   caption: [DMFEA Flow Chart]
 ) <sys-flow-chart>

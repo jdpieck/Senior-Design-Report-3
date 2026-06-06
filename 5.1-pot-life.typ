@@ -16,7 +16,7 @@ All samples used for pressure testing are machined to provide an appropriate adh
 + Calculate the total mass loss due to solvent evaporation after 5 minutes
 
 
-==== Experiment 2: Test Evaporation Time and Bond Strength of Various Dilutions
+==== Experiment 2: Evaporation Time and Bond Strength of Various Dilutions
 
 + Dispose of trays from previous experiment (or more aside out of the way)
 + Retrieve acetone and MEK from flammable storage and place containers in the fume hood

@@ -57,13 +57,15 @@
   let name = upper(type.slice(0, 1)) + type.slice(1)
   show: standard-table
   show table.cell.where(y: 1): strong
+  show table: set text(.95em)
   [
   #figure(
     table(
       columns: data.first().len(),
-      table.cell(colspan: data.first().len())[#name Ranking Criteria],
+      // table.cell(colspan: data.first().len())[#name Ranking Criteria],
       ..data.flatten()
     ),
+    caption: [#name Ranking Criteria Table]
   ) #label("ranking-criteria:" + type)
   ]
   

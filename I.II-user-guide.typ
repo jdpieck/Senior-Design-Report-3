@@ -27,12 +27,21 @@ The following is a comprehensive guide on how to properly set up, use, and clean
 ]
 
 === Prepare Plates for Adhesive Application
+#oasis-align()[
 + Turn the adhesive roller on with the switch on the electrical box and adjust to desired RPM using the speed controller knob.
+
 + Insert 2 MPHX plates into the jig so they are held in place by the shim stock and not hanging out on one side.
+  
+][
 // Add image of plates in jig
 #figure(
   caption: [Polymer Plates in Jig],
-  [#image("images/Plate In Jig 3.png", width: 50%)])
+  [#image("images/Plate In Jig 3.png", 
+  // width: 50%
+)])
+  
+]
+
 
 
 === Adhesive and Lamina Application
@@ -41,7 +50,7 @@ The following is a comprehensive guide on how to properly set up, use, and clean
 #figure(
   caption: [Plate Jig in Prototype Feed],
   [#image("images/Jig In Feed 2.png", width: 50%)])
-+ Move the jig-plate assembly over the rest of the rollers so the ridges of the plate are fully coated in adhesive. Move the jig to the end of the feed.
+2. Move the jig-plate assembly over the rest of the rollers so the ridges of the plate are fully coated in adhesive. Move the jig to the end of the feed.
 + Adhesive side down, place the plate jig on top of the lamina strips and corresponding lamina jig. Use the pins at each corner to help with proper alignment of the jig pieces.
 // Add image of lamina + jig with plate jig above it
 #oasis-align[
@@ -55,11 +64,12 @@ The following is a comprehensive guide on how to properly set up, use, and clean
   image("images/Jigs Together.jpg")
 )
 ]
-+ Secure the two halves of the jig together using screws.
+4. Secure the two halves of the jig together using screws.
 // Add image of the jigs together
 + Repeat Steps A-D, stacking each completed lamina-plate jig assembly on top of the previous one until the desired number of plates has been glued
 + 15 minutes after the final plate is glued, remove all plate-lamina modules from the jigs.
 
+#pagebreak()
 === Replenishing the Pot
 + Add a few drops of solvent to the vat as it continues to mix to thin out the consistency and stir it to ensure proper distribution.
 + If the vat is running low on adhesive, add more from the bottle and continue manufacturing procedures.

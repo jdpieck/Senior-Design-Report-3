@@ -10,6 +10,7 @@ In addition, glue application during testing was inconsistent across the plates 
 
 Another major issue identified was the consistency of adhesive application. As we did not have access to the final manufactured MPHX plates until after most of the assembly, we did not sufficiently account for the possibility of MPHX plate bowing, causing glue placement issues. 
 
+#pagebreak()
 == Future Work
 
 Future testing and improvements will require the MPHX injection-molding process to be more stabilized, including selecting a final material, addressing flashing on the plates. This will help prevent last-minute design changes such as those discussed in the previous section.
